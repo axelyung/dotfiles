@@ -1,0 +1,43 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+alias zshconfig="nvim ~/.zshrc"
+alias srczsh="source ~/.zshrc"
+
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+
+# aliases
+alias mv="mv -i"
+alias cp="cp -i"
+
+alias localip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d ' ' -f 2"
+alias externalip="curl https://ipinfo.io/ip"
+
+#ssh
+alias ssh='TERM=xterm-256color ssh'
+alias sshconfig="nvim ~/.ssh/config"
+
+alias ls='exa'
+
+# git aliases
+alias gprune="git branch --merged | egrep -v '(^\*|master|develop|dev|stage|test)' | xargs git branch -d"
+alias gundo="git reset HEAD~1"
+alias gac="gaa && gcmsg"
+alias gf="git fetch -p"
+alias gfr="git fetch -p && git rebase"
+alias lzg="lazygit"
+
+# docker
+alias dsa="docker stop $(docker ps -aq)"
+alias daa="docker attach $(docker ps -aq)"
+alias dsra="docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
+alias lzd="lazydocker"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Include custom aliases
+if [[ -f ~/.aliases.local ]]; then
+    source ~/.aliases.local
+fi
