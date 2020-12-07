@@ -13,3 +13,7 @@ git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+# terminfo files
+tic -x "$BASEDIR/resources/tmux.terminfo"
+tic -x "$BASEDIR/resources/xterm-256color-italic.terminfo"
