@@ -1,5 +1,31 @@
-- clean: ['~']
+- clean: ["~"]
 
 - link:
+    # git
+    ~/.gitconfig: git/gitconfig
 
+    # ssh
+    ~/.ssh/config:
+      path: ssh/config
+      create: true
 
+    # vim
+    ~/.SpaceVim.d/init.toml:
+      path: vim/init.toml
+      force: true
+    ~/.SpaceVim.d/autoload/:
+      glob: true
+      path: vim/autoload/*
+      create: true
+      relink: true
+
+    # zsh
+    ~/.aliases: zsh/aliases
+    ~/.p10k.zsh:
+      path: zsh/p10k.zsh
+      force: true
+    ~/.zshrc: zsh/zshrc
+
+- shell:
+    - chsh -s $(which zsh)
+    - source ~/.zshrc
