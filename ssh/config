@@ -1,9 +1,0 @@
-Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa
-
-# clearstreet
-Host lab.co.clearstreet.io
-  Preferredauthentications publickey
-  IdentityFile ~/.ssh/id_rsa

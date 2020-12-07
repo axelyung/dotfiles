@@ -4,11 +4,6 @@
     # git
     ~/.gitconfig: git/gitconfig
 
-    # ssh
-    ~/.ssh/config:
-      path: ssh/config
-      create: true
-
     # vim
     ~/.SpaceVim.d/init.toml:
       path: vim/init.toml
