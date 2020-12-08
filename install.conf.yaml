@@ -10,7 +10,7 @@
 - link:
     # git
     ~/.gitconfig: git/gitconfig
-    ~/.gitignore: git/gitignore
+    ~/.gitignore_global: git/gitignore_global
 
     # tmux
     ~/.tmux.conf:
