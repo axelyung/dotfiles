@@ -5,6 +5,14 @@
     ~/.gitconfig:
       path: git/gitconfig
       force: true
+    ~/.gitignore:
+      path: git/gitignore
+      force: true
+
+    # tmux
+    ~/.tmux.conf:
+      path: tmux/tmux.conf
+      force: true
 
     # vim
     ~/.SpaceVim.d/init.toml:
