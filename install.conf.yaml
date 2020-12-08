@@ -1,9 +1,17 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ["~"]
 
 - link:
     # git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
+
+    # oh-my-zsh
+    ~/.oh-my-zsh:
+      path: .oh-my-zsh
 
     # tmux
     ~/.tmux.conf:
@@ -18,7 +26,6 @@
       glob: true
       path: vim/autoload/*
       create: true
-      relink: true
 
     # zsh
     ~/.aliases: zsh/aliases
