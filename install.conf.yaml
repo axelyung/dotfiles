@@ -1,6 +1,9 @@
 - defaults:
     link:
       relink: true
+    shell:
+      stdout: true
+      stderr: true
 
 - clean: ["~"]
 
@@ -9,23 +12,20 @@
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
 
-    # oh-my-zsh
-    ~/.oh-my-zsh:
-      path: .oh-my-zsh
-
     # tmux
     ~/.tmux.conf:
       path: tmux/tmux.conf
       force: true
 
-    # vim
-    ~/.SpaceVim.d/init.toml:
-      path: vim/init.toml
+    # nvim
+    ~/.config/nvim:
+      path: nvim
       force: true
-    ~/.SpaceVim.d/autoload/:
-      glob: true
-      path: vim/autoload/*
-      create: true
+
+    # neofetch
+    ~/.config/neofetch:
+      path: neofetch
+      force: true
 
     # zsh
     ~/.aliases: zsh/aliases
@@ -37,5 +37,4 @@
       force: true
 
 - shell:
-    - chsh -s $(which zsh)
-    - source ~/.zshrc
+    - [source ~/.zshrc, sourcing .zshrc]

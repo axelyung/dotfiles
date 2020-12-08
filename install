@@ -2,12 +2,23 @@
 
 set -e
 
+# dotbot vars
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# zsh install
+# TODD make conditional install
+cd $HOME
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || echo "error occurred"
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=HOME/.oh-my-zsh/custom}/plugins/zsh-completions || echo "already installed"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions || echo "already installed"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting || echo "already installed"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k || echo "already installed"
+
+# dotbot install
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
@@ -15,5 +26,15 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
 # terminfo files
-tic -x "$BASEDIR/resources/tmux.terminfo"
-tic -x "$BASEDIR/resources/xterm-256color-italic.terminfo"
+tic -x "$BASEDIR/terminfo/tmux.terminfo"
+tic -x "$BASEDIR/terminfo/xterm-256color-italic.terminfo"
+
+# install tmux plugins
+mkdir -p $HOME/.tmux/plugins
+TPM_DIR="$HOME/.tmux/plugins/tpm"
+if [ ! -d $TPM_DIR ]; then
+    echo "cloning tpm plugin manager"
+    sudo git clone https://github.com/tmux-plugins/tpm $TPM_DIR
+else
+    echo "tpm plugin manager already installed"
+fi
