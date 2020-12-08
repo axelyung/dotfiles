@@ -2,12 +2,8 @@
 
 - link:
     # git
-    ~/.gitconfig:
-      path: git/gitconfig
-      force: true
-    ~/.gitignore:
-      path: git/gitignore
-      force: true
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
 
     # tmux
     ~/.tmux.conf:
