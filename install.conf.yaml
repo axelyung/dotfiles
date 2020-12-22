@@ -1,5 +1,40 @@
-- clean: ['~']
+- defaults:
+    link:
+      relink: true
+    shell:
+      stdout: true
+      stderr: true
+
+- clean: ["~"]
 
 - link:
+    # git
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
 
+    # tmux
+    ~/.tmux.conf:
+      path: tmux/tmux.conf
+      force: true
 
+    # nvim
+    ~/.config/nvim:
+      path: nvim
+      force: true
+
+    # neofetch
+    ~/.config/neofetch:
+      path: neofetch
+      force: true
+
+    # zsh
+    ~/.aliases: zsh/aliases
+    ~/.p10k.zsh:
+      path: zsh/p10k.zsh
+      force: true
+    ~/.zshrc:
+      path: zsh/zshrc
+      force: true
+
+- shell:
+    - [source ~/.zshrc, sourcing .zshrc]
