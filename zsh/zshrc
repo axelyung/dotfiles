@@ -133,3 +133,5 @@ if [ ! "$TMUX" = ""  ]; then export TERM=tmux-256color; fi
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
+
+[[ -s "/home/ayung/.gvm/scripts/gvm" ]] && source "/home/ayung/.gvm/scripts/gvm"
