@@ -1,4 +1,4 @@
-ZSH_DISABLE_COMPFIX="true"
+gSH_DISABLE_COMPFIX="true"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -133,3 +133,10 @@ if [ ! "$TMUX" = ""  ]; then export TERM=tmux-256color; fi
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
+
+# go version managing
+[[ -s "/home/ayung/.gvm/scripts/gvm" ]] && source "/home/ayung/.gvm/scripts/gvm"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

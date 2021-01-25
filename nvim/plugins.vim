@@ -69,10 +69,8 @@ let g:go_rename_command="gopls"
 let g:go_def_mapping_enabled = 0
 let g:go_auto_type_info = 1
 let g:go_doc_keywordprg_enabled = 0
-let g:go_fmt_command = "golines"
-let g:go_fmt_options = {
-    \ 'golines': '--shorten-comments -m 160 -t 2',
-    \ }
+let g:go_fmt_command = "gofmt"
+
 " format go imports
 autocmd BufWritePost *.go silent execute "!goimports-reviser -local lab.co.clearstreet.io/clearstreet/fleet -file-path <afile>" | edit
 
