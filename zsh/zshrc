@@ -79,6 +79,7 @@ plugins=(
   zsh-autosuggestions
   zsh-completions
   zsh-syntax-highlighting
+  kubectl
 )
 
 export TERM=xterm-256color-italic
