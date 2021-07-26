@@ -38,3 +38,6 @@ if [ ! -d $TPM_DIR ]; then
 else
     echo "tpm plugin manager already installed"
 fi
+
+# reload tmux config
+tmux source-file ~/.tmux.conf
