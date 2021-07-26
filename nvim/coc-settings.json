@@ -10,7 +10,7 @@
 		"typescriptreact",
 		"javascriptreact"
 	],
-	"eslint.run": "onType",
+	"eslint.run": "onSave",
 	"git.enableGutters": false,
 	"diagnostic.virtualText": true,
 	"suggest.maxCompleteItemCount": 20,
@@ -20,7 +20,6 @@
 	],
 	"explorer.file.showHiddenFiles": true,
 	"explorer.file.child.template": " [git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
-	"eslint.nodePath": "/Users/axelyung/Code/work/clearstreet/fleet/src/nebula/node_modules",
 	"coc.preferences.snippets.enable": true,
 	"languageserver": {
 		"golang": {
