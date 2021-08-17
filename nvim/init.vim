@@ -1,3 +1,7 @@
+" source .vimrc file securely
+set exrc
+set secure
+
 " set leader key
 nnoremap <Space> <NOP>
 let mapleader = "\<Space>"
