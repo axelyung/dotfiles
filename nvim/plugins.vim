@@ -36,8 +36,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'zivyangll/git-blame.vim'
 nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
 
-""Plug 'nelstrom/vim-visual-star-search'
-
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsMapCR = 0
 
@@ -47,12 +45,6 @@ Plug 'editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 Plug 'wakatime/vim-wakatime'
-
-"Plug 'yggdroot/indentline'
-"let g:indentLine_enabled = 1
-"let g:indentLine_char = '┊'
-"let g:indentLine_color_tty_light = 7
-"let g:indentLine_color_dark = 1
 
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
