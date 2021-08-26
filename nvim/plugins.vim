@@ -103,5 +103,7 @@ endfunction
 
 Plug 'vlime/vlime', {'rtp': 'vim/'}
 
+Plug 'rhysd/vim-clang-format'
+
 " Initialize plugin system
 call plug#end()
