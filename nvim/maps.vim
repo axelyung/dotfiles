@@ -24,6 +24,12 @@ inoremap <C-j> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " make Y and M consistent with C and D
 nnoremap Y y$
 nnoremap M m$
@@ -40,8 +46,8 @@ nnoremap <Leader>O mkO<Esc>`k
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-nnoremap <C-H> :History<CR>
-nnoremap <C-F> :Files<CR>
+nnoremap <C-h> :History<CR>
+nnoremap <C-f> :Files<CR>
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
