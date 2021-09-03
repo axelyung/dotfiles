@@ -96,6 +96,11 @@ endfunction
 Plug 'vlime/vlime', {'rtp': 'vim/'}
 
 Plug 'rhysd/vim-clang-format'
+let g:clang_format#auto_format = 1
+let g:clang_format#style_options = {
+	\ "BasedOnStyle" : "Google",
+	\ "AllowShortIfStatementsOnASingleLine" : "true",
+	\ "IndentCaseLabels" : "true" }
 
 " Initialize plugin system
 call plug#end()
