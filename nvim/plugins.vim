@@ -101,6 +101,8 @@ let g:clang_format#style_options = {
 	\ "BasedOnStyle" : "Google",
 	\ "AllowShortIfStatementsOnASingleLine" : "true",
 	\ "IndentCaseLabels" : "true" }
+autocmd FileType c,cpp ClangFormatAutoEnable
+autocmd FileType js,ts ClangFormatAutoDisable
 
 " Initialize plugin system
 call plug#end()
