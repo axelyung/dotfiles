@@ -12,6 +12,9 @@
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
 
+    # alacritty
+    ~/.alacritty.yml: alacritty/alacritty.yml
+
     # tmux
     ~/.tmux.conf:
       path: tmux/tmux.conf
