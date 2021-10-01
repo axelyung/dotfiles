@@ -104,5 +104,8 @@ let g:clang_format#style_options = {
 autocmd FileType c,cpp ClangFormatAutoEnable
 autocmd FileType js,ts ClangFormatAutoDisable
 
+Plug 'hashivim/vim-terraform'
+let g:terraform_fmt_on_save = 1
+
 " Initialize plugin system
 call plug#end()
