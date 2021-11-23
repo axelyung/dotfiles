@@ -78,7 +78,9 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
-  \ 'coc-eslint'
+  \ 'coc-eslint',
+  \ 'coc-pyright',
+  \ 'coc-explorer',
   \ ]
 
 Plug 'neoclide/coc-snippets'
@@ -106,6 +108,10 @@ autocmd FileType js,ts ClangFormatAutoDisable
 
 Plug 'hashivim/vim-terraform'
 let g:terraform_fmt_on_save = 1
+
+" python
+Plug 'vim-scripts/indentpython.vim'
+Plug 'davidhalter/jedi-vim'
 
 " Initialize plugin system
 call plug#end()
