@@ -146,3 +146,8 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+eval "$(pyenv init -)"
+export PYENV_VERSION=3.10.0
+
+eval "$(plow --completion-script-zsh)"
