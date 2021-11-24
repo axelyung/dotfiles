@@ -7,3 +7,8 @@ ignore = dirty
 path = .oh-my-zsh
 url = https://github.com/ohmyzsh/ohmyzsh
 ignore = dirty
+
+[submodule "tpm"]
+path = tmux/plugins/tpm
+url = https://github.com/tmux-plugins/tpm
+ignore = dirty
