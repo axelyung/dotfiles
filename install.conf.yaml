@@ -39,5 +39,10 @@
       path: zsh/zshrc
       force: true
 
+    # conky
+    ~/.config/conky:
+      path: conky
+      force: true
+
 - shell:
     - [source ~/.zshrc, sourcing .zshrc]
