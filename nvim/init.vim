@@ -30,7 +30,7 @@ highlight Normal ctermbg=None
 highlight LineNr ctermfg=DarkGrey" Turn on line numbers
 set number
 "" Dark backgrounds
-"set background=dark
+set background=dark
 " Bold the line I am currently on
 set cursorline
 " Add side padding column

@@ -3,6 +3,8 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+Plug 'sheerun/vim-polyglot'
+
 Plug 'joshdick/onedark.vim'
 let g:onedark_hide_endofbuffer=1
 let g:onedark_terminal_italics=1
@@ -47,6 +49,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 Plug 'wakatime/vim-wakatime'
 
 Plug 'ap/vim-css-color'
+
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
