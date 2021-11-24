@@ -19,6 +19,9 @@
     ~/.tmux.conf:
       path: tmux/tmux.conf
       force: true
+    ~/.tmux/plugins:
+      path: tmux/plugins
+      force: true
 
     # nvim
     ~/.config/nvim:
