@@ -1,10 +1,11 @@
 {
   "clangd.path": "/Users/axelyung/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
-  "coc.preferences.formatOnSaveFiletypes": [],
+  "coc.preferences.formatOnSave": true,
   "coc.preferences.formatOnType": false,
   "diagnostic.virtualText": true,
   "eslint.autoFixOnSave": true,
   "eslint.debug": true,
+  "eslint.format.enable": true,
   "explorer.file.child.template": " [git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
   "explorer.file.showHiddenFiles": true,
   "git.enableGutters": false,
