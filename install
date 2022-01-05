@@ -9,26 +9,11 @@ DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# tpm sync
+git -C "${BASEDIR}/tmux/plugins/tpm" submodule sync --recursive
+
 # dotbot install
 cd "${BASEDIR}"
-git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git -C "${DOTBOT_DIR}" submodule sync --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
-
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
-
-# terminfo files
-tic -x "$BASEDIR/terminfo/tmux.terminfo"
-tic -x "$BASEDIR/terminfo/xterm-256color-italic.terminfo"
-
-# install tmux plugins
-mkdir -p $HOME/.tmux/plugins
-TPM_DIR="$HOME/.tmux/plugins/tpm"
-if [ ! -d $TPM_DIR ]; then
-    echo "cloning tpm plugin manager"
-    sudo git clone https://github.com/tmux-plugins/tpm $TPM_DIR
-else
-    echo "tpm plugin manager already installed"
-fi
-
-# reload tmux config
-tmux source-file ~/.tmux.conf
