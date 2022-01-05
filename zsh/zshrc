@@ -156,7 +156,7 @@ fi
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	# if not in tmux session already start new session
-	exec tmux
+	exec tmux new -As0
 else
 	# call neofetch on start
 	neofetch
