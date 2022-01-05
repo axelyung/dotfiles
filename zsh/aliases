@@ -20,7 +20,7 @@ alias sshconfig="nvim ~/.ssh/config"
 
 alias ls='exa'
 
-# git aliases
+# git
 alias gprune="git branch --merged | egrep -v '(^\*|master|develop|dev|stage|test)' | xargs git branch -d"
 alias gundo="git reset HEAD~1"
 alias gac="gaa && gcmsg"
