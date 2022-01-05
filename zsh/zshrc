@@ -109,9 +109,6 @@ fi
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# call neofetch on start
-neofetch
-
 # aliases
 source ~/.aliases
 
@@ -130,11 +127,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # for tmux compatability
 if [ ! "$TMUX" = ""  ]; then export TERM=tmux-256color; fi
 
-# include local rc file
-if [[ -f ~/.zshrc.local ]]; then
-  source ~/.zshrc.local
-fi
-
 # go version managing
 [[ -s "/home/ayung/.gvm/scripts/gvm" ]] && source "/home/ayung/.gvm/scripts/gvm"
 
@@ -144,6 +136,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export NODE_OPTIONS=--openssl-legacy-provider
 
+# terraform
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
@@ -151,5 +144,20 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 eval "$(pyenv init -)"
 export PYENV_VERSION=3.10.0
 
-# set alacritty to default terminal
-export TERM=alacritty
+# set alacritty to default terminal on linux
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	export TERM=alacritty
+fi
+
+# include local rc file
+if [[ -f ~/.zshrc.local ]]; then
+	source ~/.zshrc.local
+fi
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	# if not in tmux session already start new session
+	exec tmux
+else
+	# call neofetch on start
+	neofetch
+fi
