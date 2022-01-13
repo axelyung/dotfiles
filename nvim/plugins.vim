@@ -85,6 +85,7 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-explorer',
   \ 'coc-json',
+  \ 'coc-clangd',
   \ ]
 
 Plug 'neoclide/coc-snippets'
