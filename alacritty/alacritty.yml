@@ -96,8 +96,6 @@ window:
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
-
   # Scrolling distance multiplier.
   #multiplier: 3
 
@@ -111,7 +109,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: MesloLGS NF
+    family: "MesloLGS NF"
     style: Regular
 
   # Bold font face
@@ -120,7 +118,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: MesloLGS NF
+    family: "MesloLGS NF"
     style: Bold
 
   # Italic font face
@@ -129,7 +127,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: MesloLGS NF
+    family: "MesloLGS NF"
     style: Italic
 
   # Bold italic font face
@@ -138,11 +136,11 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: MesloLGS NF
+    family: "MesloLGS NF"
     style: Bold Italic
 
   # Point size
-  size: 10
+  size: 14
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
