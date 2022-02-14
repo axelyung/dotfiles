@@ -103,7 +103,7 @@ endfunction
 Plug 'vlime/vlime', {'rtp': 'vim/'}
 
 Plug 'rhysd/vim-clang-format'
-let g:clang_format#auto_format = 1
+let g:clang_format#auto_format = 0
 let g:clang_format#style_options = {
 	\ "BasedOnStyle" : "Google",
 	\ "AllowShortIfStatementsOnASingleLine" : "true",
@@ -117,6 +117,17 @@ let g:terraform_fmt_on_save = 1
 " python
 Plug 'vim-scripts/indentpython.vim'
 Plug 'davidhalter/jedi-vim'
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript', 'typescript.tsx'],
+  \ 'do': 'make install'
+\}
+
+Plug 'jparise/vim-graphql'
 
 " Initialize plugin system
 call plug#end()
