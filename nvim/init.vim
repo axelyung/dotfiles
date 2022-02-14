@@ -41,7 +41,7 @@ set wildmode=list:longest,full
 " Show the mode
 set showmode
 "" Show executed commands
-"set showcmd
+set showcmd
 "" Always show status line
  "set laststatus=2
 " Always show tab bar
@@ -122,3 +122,17 @@ let g:python3_host_prog = '/Users/axelyung/.pyenv/shims/python3'
 set foldmethod=indent
 " disable folding
 set nofoldenable
+
+" autosource .vimrc
+if (!exists('*SourceConfig'))
+  function SourceConfig() abort
+    " Your path will probably be different
+    for f in split(glob('~/.config/nvim/autoload/*'), '\n')
+      exe 'source' f
+    endfor
+
+    source $MYVIMRC
+  endfunction
+endif
+
+:autocmd BufWritePost ~/.config/nvim/init.vim execute SourceConfig() %:p
