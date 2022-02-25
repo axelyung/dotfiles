@@ -129,5 +129,7 @@ Plug 'heavenshell/vim-jsdoc', {
 
 Plug 'jparise/vim-graphql'
 
+Plug 'github/copilot.vim'
+
 " Initialize plugin system
 call plug#end()
