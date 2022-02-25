@@ -49,6 +49,13 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <C-h> :History<CR>
 nnoremap <C-f> :Files<CR>
 
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
+
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
@@ -76,3 +83,5 @@ endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
+" source vimrc
+nnoremap <leader>sv :call SourceConfig()<cr>
