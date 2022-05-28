@@ -48,8 +48,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 Plug 'wakatime/vim-wakatime'
 
-Plug 'ap/vim-css-color'
-
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -85,7 +83,10 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-explorer',
   \ 'coc-json',
-  \ 'coc-clangd',
+  \ 'coc-yaml',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-tailwindcss',
   \ ]
 
 Plug 'neoclide/coc-snippets'
@@ -102,14 +103,14 @@ endfunction
 
 Plug 'vlime/vlime', {'rtp': 'vim/'}
 
-Plug 'rhysd/vim-clang-format'
-let g:clang_format#auto_format = 0
-let g:clang_format#style_options = {
-	\ "BasedOnStyle" : "Google",
-	\ "AllowShortIfStatementsOnASingleLine" : "true",
-	\ "IndentCaseLabels" : "true" }
-autocmd FileType c,cpp ClangFormatAutoEnable
-autocmd FileType js,ts ClangFormatAutoDisable
+"Plug 'rhysd/vim-clang-format'
+"let g:clang_format#auto_format = 0
+"let g:clang_format#style_options = {
+	"\ "BasedOnStyle" : "Google",
+	"\ "AllowShortIfStatementsOnASingleLine" : "true",
+	"\ "IndentCaseLabels" : "true" }
+"autocmd FileType c,cpp ClangFormatAutoEnable
+"autocmd FileType js,ts,jsx,tsx ClangFormatAutoDisable
 
 Plug 'hashivim/vim-terraform'
 let g:terraform_fmt_on_save = 1
@@ -117,10 +118,6 @@ let g:terraform_fmt_on_save = 1
 " python
 Plug 'vim-scripts/indentpython.vim'
 Plug 'davidhalter/jedi-vim'
-
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx','typescript', 'typescript.tsx'],
