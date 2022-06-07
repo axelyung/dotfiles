@@ -106,7 +106,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/id_ed25519"
 
 # aliases
 source ~/.aliases
@@ -133,18 +133,11 @@ if [ ! "$TMUX" = ""  ]; then export TERM=tmux-256color; fi
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-# pyenv
-eval "$(pyenv init -)"
-export PYENV_VERSION=3.10.0
-
 # set alacritty to default terminal on linux
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	export TERM=alacritty
 	export TERMINAL=alacritty
 fi
-
-# set default browser
-export BROWSER=/usr/bin/brave
 
 # include local rc file
 if [[ -f ~/.zshrc.local ]]; then
