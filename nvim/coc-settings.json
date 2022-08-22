@@ -1,9 +1,10 @@
 {
   "diagnostic.virtualText": true,
+  "tsserver.ignoreLocalTsserver": true,
   "json.format.enable": true,
   "json.enable":true,
   "eslint.autoFixOnSave": true,
-  "eslint.debug": false,
+  "eslint.debug": true,
   "eslint.packageManager": "pnpm",
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
@@ -24,5 +25,6 @@
     }
   },
   "suggest.maxCompleteItemCount": 20,
-  "tsserver.formatOnType": false
+  "tsserver.formatOnType": false,
+  "coc.source.emoji.filetypes": null
 }
