@@ -25,6 +25,5 @@
     }
   },
   "suggest.maxCompleteItemCount": 20,
-  "tsserver.formatOnType": false,
-  "coc.source.emoji.filetypes": null
+  "tsserver.formatOnType": false
 }

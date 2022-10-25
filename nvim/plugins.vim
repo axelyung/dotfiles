@@ -52,6 +52,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
+Plug 'chrisbra/Colorizer'
+let g:colorizer_auto_filetype='*'
+let g:colorizer_auto_color = 1
+let g:colorizer_skip_comments = 1
+let g:colorizer_disable_bufleave = 1
+
 Plug 'fatih/vim-go'
 let g:go_list_type = "quickfix"
 let g:go_highlight_operators = 1
@@ -63,9 +69,6 @@ let g:go_def_mapping_enabled = 0
 let g:go_auto_type_info = 1
 let g:go_doc_keywordprg_enabled = 0
 let g:go_fmt_command = "gofmt"
-
-" format go imports
-autocmd BufWritePost *.go silent execute "!goimports-reviser -local lab.co.clearstreet.io/clearstreet/fleet -file-path <afile>" | edit
 
 Plug 'alvan/vim-closetag'
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.tsx"
