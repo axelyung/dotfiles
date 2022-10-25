@@ -10,3 +10,6 @@ ignore = dirty
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "onedark"]
+	path = onedark
+	url = https://github.com/joshdick/onedark.vim
