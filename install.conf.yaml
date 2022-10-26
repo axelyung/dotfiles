@@ -7,11 +7,6 @@
 
 - clean: ["~"]
 
-- create:
-    - ~/Applications
-    - ~/Code
-    - ~/.ssh
-
 - link:
     # dunst
     ~/.config/dunst:
@@ -19,22 +14,28 @@
       path: dunst
 
     # git
-    ~/.gitconfig: git/gitconfig
-    ~/.gitignore_global: git/gitignore_global
+    ~/.gitconfig:
+      if: which git
+      path: git/gitconfig
+    ~/.gitignore_global:
+      if: which git
+      path: git/gitignore_global
 
     # alacritty
-    ~/.alacritty.yml: alacritty/alacritty.yml
+    ~/.alacritty.yml:
+      if: which alacritty
+      path: alacritty/alacritty.yml
 
     # regolith
     ~/.config/regolith2:
       path: regolith
 
     # tmux
-    ~/.tmux.conf:
-      path: tmux/tmux.conf
-      force: true
-    ~/.tmux/plugins:
-      path: tmux/plugins
+    #~/.tmux.conf:
+      #path: tmux/tmux.conf
+      #force: true
+    #~/.tmux/plugins:
+      #path: tmux/plugins
 
     # nvim
     ~/.config/nvim:
@@ -49,12 +50,13 @@
     # zsh
     ~/.aliases: zsh/aliases
     ~/.zshrc:
+      if: which zsh
       path: zsh/zshrc
 
     # conky
-    ~/.config/conky:
-      if: which conky
-      path: conky
+    #~/.config/conky:
+      #if: which conky
+      #path: conky
 
 - shell:
   -
@@ -78,6 +80,9 @@
     if: which dunst
     command: killall dunst
   -
-    description: Notify
-    if: which notify-send
-    command: notify-send "dotfiles installed"
+    description: Test notifications
+    if: which dunstify
+    command: |
+      dunstify -t 3 -u low "low urgency notification"
+      dunstify -t 3 -u normal "normal urgency notification"
+      dunstify -t 3 -u critical "critical urgency notification"
