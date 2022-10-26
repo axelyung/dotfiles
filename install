@@ -9,9 +9,6 @@ DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# tpm sync
-git -C "${BASEDIR}/tmux/plugins/tpm" submodule sync --recursive
-
 # dotbot install
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --recursive

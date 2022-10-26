@@ -8,10 +8,16 @@
 - clean: ["~"]
 
 - create:
+    - ~/Applications
     - ~/Code
     - ~/.ssh
 
 - link:
+    # dunst
+    ~/.config/dunst:
+      if: which dunst
+      path: dunst
+
     # git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
@@ -19,45 +25,59 @@
     # alacritty
     ~/.alacritty.yml: alacritty/alacritty.yml
 
+    # regolith
+    ~/.config/regolith2:
+      path: regolith
+
     # tmux
     ~/.tmux.conf:
       path: tmux/tmux.conf
       force: true
     ~/.tmux/plugins:
       path: tmux/plugins
-      force: true
-    ~/.tmux/plugins:
-      path: tmux/plugins
-      force: true
 
     # nvim
     ~/.config/nvim:
+      if: which nvim
       path: nvim
-      force: true
 
     # neofetch
     ~/.config/neofetch:
+      if: which neofetch
       path: neofetch
-      force: true
 
     # zsh
     ~/.aliases: zsh/aliases
-    ~/.p10k.zsh:
-      path: zsh/p10k.zsh
-      force: true
     ~/.zshrc:
       path: zsh/zshrc
-      force: true
 
     # conky
     ~/.config/conky:
+      if: which conky
       path: conky
-      force: true
 
 - shell:
-  - tic -x terminfo/tmux.terminfo
-  - tic -x terminfo/xterm-256color-italic.terminfo
-  - tmux source-file ~/.tmux.conf
-  - ~/.tmux/plugins/tpm/scripts/install_plugins.sh
-  - nvim +PlugUpgrade +PlugInstall +CocInstall +qall
-  - source ~/.zshrc
+  -
+    if: which regolith-look
+    description: Refresh regolith theme
+    command: regolith-look refresh
+  #- tic -x terminfo/tmux.terminfo
+  #- tic -x terminfo/xterm-256color-italic.terminfo
+  #- tmux source-file ~/.tmux.conf
+  #- ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+  - 
+    if: which nvim
+    description: NeoVim installation
+    command: nvim +PlugUpgrade +PlugInstall +CocInstall +qall
+  - 
+    if: which zsh
+    description: Refresh zsh
+    command: source ~/.zshrc
+  -
+    description: Refresh dunst
+    if: which dunst
+    command: killall dunst
+  -
+    description: Notify
+    if: which notify-send
+    command: notify-send "dotfiles installed"
