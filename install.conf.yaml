@@ -60,6 +60,10 @@
 
 - shell:
   -
+    description: Refresh dunst
+    if: which dunst
+    command: killall dunst
+  -
     if: which regolith-look
     description: Refresh regolith theme
     command: regolith-look refresh
@@ -75,10 +79,6 @@
     if: which zsh
     description: Refresh zsh
     command: source ~/.zshrc
-  -
-    description: Refresh dunst
-    if: which dunst
-    command: killall dunst
   -
     description: Test notifications
     if: which dunstify

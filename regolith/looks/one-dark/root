@@ -97,7 +97,7 @@ gtk.monospace_font_name: gtk_monospace_font_name
 #include "/home/axelyung/.config/regolith2/looks/one-dark/gnome-terminal"
 
 ! --------------------------------------------
-! -- Loader Path - Path to script responsible 
+! -- Loader Path - Path to script responsible
 ! -- for configuring UI from Xres values
 ! --------------------------------------------
 
