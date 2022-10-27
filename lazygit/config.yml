@@ -1,7 +1,3 @@
-gui:
-  language: 'en'
-  theme:
-    lightTheme: false
 customCommands:
   - key: "C"
     command: "git cz c"
