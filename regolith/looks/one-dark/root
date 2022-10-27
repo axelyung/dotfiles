@@ -1,34 +1,4 @@
 ! --------------------------------------------
-! -- Colors
-! --------------------------------------------
-
-#define color_background   #282C34
-#define color_black_dark       #2C323C
-#define color_black_light       #3E4452
-#define color_blue      #61AFEF
-#define color_cursorColor  #ABB2BF
-#define color_cyan      #56B6C2
-#define color_foreground   #ABB2BF
-#define color_green       #98C379
-#define color_magenta  #5E81AC
-#define color_orange   #D08770
-#define color_violet      #C678DD
-#define color_red       #E06C75
-#define color_white_dark       #5C6370
-#define color_white_light      #ABB2BF
-#define color_yellow       #E5C07B
-
-#define color_base0    color_white_light
-#define color_base00   color_white_dark
-#define color_base01   color_black_light
-#define color_base02   color_black_dark
-#define color_base03   color_background
-#define color_base1    #E5E9F0
-#define color_base2    #ECEFF4
-#define color_base3    #ECEFF4
-#define color_nord4    #4C566A
-
-! --------------------------------------------
 ! -- This file is in the Xresource file format
 ! --------------------------------------------
 
@@ -45,19 +15,19 @@ regolith.look: one-dark
 ! -- Specify either a complete file path to an image
 
 regolith.wallpaper.file:
-regolith.wallpaper.options:
+regolith.wallpaper.options: zoom
 
 !-- *Or* specify a color
 
-regolith.wallpaper.color.primary: color_foreground
+regolith.wallpaper.color.primary: #abb2bf
 
 !-- If specifying a primary color, optional additional settings
 
 regolith.wallpaper.color.secondary:
-regolith.wallpaper.color.shading.type: 
+regolith.wallpaper.color.shading.type:
 
 ! --------------------------------------------
-! -- Lockscreen Wallpaper 
+! -- Lockscreen Wallpaper
 ! --------------------------------------------
 
 !-- the following keys can be set to specify the lockscreen background, as above with desktop wallpaper
@@ -70,7 +40,7 @@ regolith.lockscreen.wallpaper.options:
 
 !-- *Or* specify a color
 
-regolith.lockscreen.wallpaper.color.primary: color_foreground
+regolith.lockscreen.wallpaper.color.primary: #abb2bf
 
 !-- If specifying a primary color, optional additional settings
 
@@ -81,36 +51,50 @@ regolith.lockscreen.wallpaper.color.shading.type:
 ! -- Theme elements
 ! --------------------------------------------
 
-gtk.theme_name: Nordic
+gtk.theme_name: SolArc-Dark
 gtk.icon_theme_name: Arc
-
-! --------------------------------------------
-! -- Compositor Config
-! --------------------------------------------
-
-regolith.compositor.picom.config: ./picom.conf
-! -- Other compositor configs may be specified as desired:
-! -- regolith.compositor.compton.config
 
 ! --------------------------------------------
 ! -- Fonts
 ! --------------------------------------------
 
-#define gtk_font_name FiraCode NF 12
-#define gtk_document_font_name Sans 12
-#define gtk_monospace_font_name  FiraCode NF 12
+#define gtk_font_name FiraCode Nerd Font 12
+#define gtk_document_font_name Sans 11
+#define gtk_monospace_font_name FiraCode Nerd Font 12
 
 gtk.font_name: gtk_font_name
 gtk.document_font_name: gtk_document_font_name
 gtk.monospace_font_name: gtk_monospace_font_name
 
 ! --------------------------------------------
+! -- Colors
+! --------------------------------------------
+
+! One Dark Colors
+#define color_base03    #282c34
+#define color_base02    #393d46
+#define color_base01    #4a4f58
+#define color_base00    #5c626c
+#define color_base0     #6f7580
+#define color_base1     #838994
+#define color_base2     #979da9
+#define color_base3     #abb2bf
+#define color_yellow    #E5C07B
+#define color_orange    #ea966c
+#define color_red       #E06C75
+#define color_magenta   #C678DD
+#define color_violet    #6c71c4
+#define color_blue      #61AFEF
+#define color_cyan      #56B6C2
+#define color_green     #98c379
+
+! --------------------------------------------
 ! -- Component resources
 ! --------------------------------------------
 
-#include "./i3xrocks"
-#include "./i3-wm"
-#include "./gnome-terminal"
+#include "/home/axelyung/.config/regolith2/looks/one-dark/i3xrocks"
+#include "/home/axelyung/.config/regolith2/looks/one-dark/i3-wm"
+#include "/home/axelyung/.config/regolith2/looks/one-dark/gnome-terminal"
 
 ! --------------------------------------------
 ! -- Loader Path - Path to script responsible 

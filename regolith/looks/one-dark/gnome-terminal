@@ -15,5 +15,5 @@ gnome.terminal.color13:   color_violet
 gnome.terminal.color14:   color_cyan
 gnome.terminal.color15:   color_base2
 
-gnome.terminal.font:      gtk_monospace_font_name
+gnome.terminal.font:      FiraCode Nerd Font 12
 gnome.terminal.scrollbar: never

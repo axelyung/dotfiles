@@ -1,7 +1,7 @@
 #define i3wm_window_border_style         pixel
 #define i3wm_floatingwindow_border_style pixel
-#define i3wm_window_border_size          3
-#define i3wm_floatingwindow_border_size  3
+#define i3wm_window_border_size          1
+#define i3wm_floatingwindow_border_size  1
 #define i3wm_gaps_inner_size             5
 #define i3wm_gaps_outer_size             0
 #define i3wm_bar_position                bottom
@@ -31,10 +31,10 @@ i3-wm.bar.workspace.urgent.background.color: color_red
 i3-wm.bar.workspace.urgent.text.color: color_base3
 
 i3-wm.client.focused.color.border: color_base03
-i3-wm.client.focused.color.background: color_green
+i3-wm.client.focused.color.background: color_base01
 i3-wm.client.focused.color.text: color_base3
-i3-wm.client.focused.color.indicator: color_green
-i3-wm.client.focused.color.child_border: color_green
+i3-wm.client.focused.color.indicator: color_blue
+i3-wm.client.focused.color.child_border: color_base01
 
 i3-wm.client.focused_inactive.color.border: color_base03
 i3-wm.client.focused_inactive.color.background: color_base02
@@ -60,7 +60,6 @@ i3-wm.floatingwindow.border.style: i3wm_floatingwindow_border_style
 i3-wm.floatingwindow.border.size: i3wm_floatingwindow_border_size
 i3-wm.gaps.inner.size: i3wm_gaps_inner_size
 i3-wm.gaps.outer.size: i3wm_gaps_outer_size
-i3-wm.gaps.smart: inverse_outer
 
 #define WORKSPACE_NAME(INDEX, FONT, COLOR, GLYPH) INDEX:<span> </span><span font_desc=FONT>INDEX </span><span foreground=COLOR>GLYPH</span><span> </span>
 
