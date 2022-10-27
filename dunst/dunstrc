@@ -41,7 +41,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 20
+    transparency = 10
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -64,7 +64,7 @@
     frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#FFFFFF00"
+    frame_color = "#00000000"
 
     # Define a color for the separator.
     # possible values are:
