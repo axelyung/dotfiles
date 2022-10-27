@@ -1,2 +1,1 @@
-!regolith.look.path: /usr/share/regolith-look/default
-regolith.look.path: /usr/share/regolith-look/nord
+regolith.look.path: /home/axelyung/.config/regolith2/looks/one-dark
