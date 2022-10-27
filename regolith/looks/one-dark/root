@@ -19,7 +19,7 @@ regolith.wallpaper.options: zoom
 
 !-- *Or* specify a color
 
-regolith.wallpaper.color.primary: #abb2bf
+regolith.wallpaper.color.primary: #5c626c
 
 !-- If specifying a primary color, optional additional settings
 
@@ -40,7 +40,7 @@ regolith.lockscreen.wallpaper.options:
 
 !-- *Or* specify a color
 
-regolith.lockscreen.wallpaper.color.primary: #abb2bf
+regolith.lockscreen.wallpaper.color.primary: #5c626c
 
 !-- If specifying a primary color, optional additional settings
 
@@ -92,9 +92,9 @@ gtk.monospace_font_name: gtk_monospace_font_name
 ! -- Component resources
 ! --------------------------------------------
 
+#include "/home/axelyung/.config/regolith2/looks/one-dark/gnome-terminal"
 #include "/home/axelyung/.config/regolith2/looks/one-dark/i3xrocks"
 #include "/home/axelyung/.config/regolith2/looks/one-dark/i3-wm"
-#include "/home/axelyung/.config/regolith2/looks/one-dark/gnome-terminal"
 
 ! --------------------------------------------
 ! -- Loader Path - Path to script responsible
@@ -102,3 +102,4 @@ gtk.monospace_font_name: gtk_monospace_font_name
 ! --------------------------------------------
 
 regolith.look.loader: /usr/share/regolith-look/default_loader.sh
+regolith.compositor.picom.config: /home/axelyung/.config/regolith2/looks/one-dark/picom.conf
