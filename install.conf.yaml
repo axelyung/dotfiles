@@ -33,9 +33,9 @@
       path: regolith
 
     # tmux
-    #~/.tmux.conf:
-      #path: tmux/tmux.conf
-      #force: true
+    ~/.tmux.conf:
+      path: tmux/tmux.conf
+      force: true
     #~/.tmux/plugins:
       #path: tmux/plugins
 
@@ -71,7 +71,11 @@
     command: regolith-look refresh
   #- tic -x terminfo/tmux.terminfo
   #- tic -x terminfo/xterm-256color-italic.terminfo
-  #- tmux source-file ~/.tmux.conf
+  -
+    if: which tmux
+    description: source tmux config file
+    command: tmux source-file ~/.tmux.conf
+
   #- ~/.tmux/plugins/tpm/scripts/install_plugins.sh
   - 
     if: which nvim

@@ -65,8 +65,8 @@ i3-wm.hide.edge.borders: none
 
 #define WORKSPACE_NAME(INDEX, FONT, COLOR, GLYPH) INDEX:<span> </span><span font_desc=FONT>INDEX </span><span foreground=COLOR>GLYPH</span><span> </span>
 
-i3-wm.workspace.01.name: WORKSPACE_NAME(1, glyph_font, QUOTE(color_blue), glyph)
-i3-wm.workspace.02.name: WORKSPACE_NAME(2, glyph_font, QUOTE(color_cyan), glyph)
+i3-wm.workspace.01.name: WORKSPACE_NAME(1, glyph_font, QUOTE(color_violet), glyph)
+i3-wm.workspace.02.name: WORKSPACE_NAME(2, glyph_font, QUOTE(color_blue), glyph)
 i3-wm.workspace.03.name: WORKSPACE_NAME(3, glyph_font, QUOTE(color_green), glyph)
 i3-wm.workspace.04.name: WORKSPACE_NAME(4, glyph_font, QUOTE(color_yellow), glyph)
 i3-wm.workspace.05.name: WORKSPACE_NAME(5, glyph_font, QUOTE(color_orange), glyph)
