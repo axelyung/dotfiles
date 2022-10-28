@@ -54,6 +54,9 @@
     ~/.zshrc:
       if: which zsh
       path: zsh/zshrc
+    ~/.config/oh-my-zsh:
+      if: which zsh
+      path: zsh/oh-my-zsh
 
     # conky
     #~/.config/conky:
