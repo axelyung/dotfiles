@@ -50,13 +50,9 @@
       path: neofetch
 
     # zsh
-    ~/.aliases: zsh/aliases
-    ~/.zshrc:
+    ~/.config/zsh:
       if: which zsh
-      path: zsh/zshrc
-    ~/.config/oh-my-zsh:
-      if: which zsh
-      path: zsh/oh-my-zsh
+      path: zsh
 
     # conky
     #~/.config/conky:
@@ -87,7 +83,9 @@
   - 
     if: which zsh
     description: Refresh zsh
-    command: source ~/.zshrc
+    command: |
+      echo "source ~/.config/zsh/zshrc" > ~/.zshrc
+      source ~/.zshrc
   -
     description: Test notifications
     if: which dunstify
