@@ -65,10 +65,20 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  asdf
-  golang
-  kubectl
+	aliases
+	colored-man-pages
+	command-not-found
+	copydir
+	copyfile
+	cp
+	history
+	tmux
+	zoxide
+	docker
+	git
+	nvm
+	debian
+	rand-quote
   #zsh-completions
   #zsh-autosuggestions
   #zsh-syntax-highlighting
@@ -106,7 +116,8 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 	# if not in tmux session already start new session
 	exec tmux new -As0
 else
-	# call fortune on start
+	# call quote on start
+	quote
 fi
 
 # zoxide
