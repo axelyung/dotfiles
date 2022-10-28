@@ -54,6 +54,10 @@
       if: which zsh
       path: zsh
 
+    ~/.config/starship.toml:
+      if: which starship
+      path: starship/starship.toml
+
     # conky
     #~/.config/conky:
       #if: which conky
@@ -84,7 +88,7 @@
     if: which zsh
     description: Refresh zsh
     command: |
-      echo "source ~/.config/zsh/zshrc" > ~/.zshrc
+      echo "source ~/.config/zsh/root" > ~/.zshrc
       source ~/.zshrc
   -
     description: Test notifications
