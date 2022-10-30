@@ -5,14 +5,9 @@
 alias zshconfig="nvim ~/.zshrc"
 alias srczsh="source ~/.zshrc"
 
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-
 # aliases
 alias mv="mv -i"
 alias cp="cp -i"
-
-alias localip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d ' ' -f 2"
-alias externalip="curl https://ipinfo.io/ip"
 
 #ssh
 alias ssh='TERM=xterm-256color ssh'
@@ -34,8 +29,14 @@ alias daa="docker attach $(docker ps -aq)"
 alias dsra="docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
 alias lzd="lazydocker"
 
+alias bat="batcat"
+
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# dotfiles
+alias dfs="z dotfiles"
+alias dfsi="$(zoxide query dotfiles)/install"
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
