@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 
 Plug 'joshdick/onedark.vim'
+let g:onedark_hide_endofbuffer=0
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -45,6 +46,8 @@ Plug 'editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 Plug 'wakatime/vim-wakatime'
+
+Plug 'cespare/vim-toml'
 
 "Plug 'pangloss/vim-javascript'
 "Plug 'leafgarland/typescript-vim'
@@ -113,6 +116,9 @@ let g:coc_global_extensions = [
 "autocmd FileType c,cpp ClangFormatAutoEnable
 "autocmd FileType js,ts,jsx,tsx ClangFormatAutoDisable
 
+"Plug 'hashivim/vim-terraform'
+"let g:terraform_fmt_on_save = 1
+
 " python
 "Plug 'vim-scripts/indentpython.vim'
 "Plug 'davidhalter/jedi-vim'
@@ -121,6 +127,8 @@ let g:coc_global_extensions = [
   "\ 'for': ['javascript', 'javascript.jsx','typescript', 'typescript.tsx'],
   "\ 'do': 'make install'
 "\}
+
+"Plug 'jparise/vim-graphql'
 
 Plug 'github/copilot.vim'
 
