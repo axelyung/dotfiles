@@ -1,13 +1,20 @@
 - defaults:
     link:
+      create: true
       relink: true
       force: true
     shell:
+      stdin: true
       stdout: true
       stderr: true
-
-- clean: ["~"]
-
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
+- create:
+  - ~/Code
+  - ~/Applications
 - link:
     # dunst
     ~/.config/dunst:
@@ -58,15 +65,18 @@
       if: which starship
       path: starship/starship.toml
 
+    ~/.config/taskwarrior:
+      if: which task
+      path: taskwarrior
+
     # conky
     #~/.config/conky:
       #if: which conky
       #path: conky
-
 - shell:
   -
-    description: Refresh dunst
     if: which dunst
+    description: Refresh dunst
     command: killall dunst
   -
     if: which regolith-look
@@ -91,8 +101,8 @@
       echo "source ~/.config/zsh/root" > ~/.zshrc
       source ~/.zshrc
   -
-    description: Test notifications
     if: which dunstify
+    description: Test notifications
     command: |
       dunstify -t 3 -u low "low urgency notification"
       dunstify -t 3 -u normal "normal urgency notification"

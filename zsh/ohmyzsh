@@ -78,6 +78,7 @@ plugins=(
 	nvm
 	debian
 	rand-quote
+	taskwarrior
 	zsh-completions
 	zsh-autosuggestions
 	zsh-syntax-highlighting

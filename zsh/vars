@@ -2,3 +2,5 @@ export EDITOR=vi
 export VISUAL=nvim
 
 export SSH_KEY_PATH="~/.ssh/id_ed25519"
+
+export TASKRC="~/.config/taskwarrior/taskrc"

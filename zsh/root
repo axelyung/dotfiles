@@ -1,16 +1,14 @@
-ZSH_DIR="~/.config/zsh"
-
 # vars
-source $ZSH_DIR/vars
+source ~/.config/zsh/vars
 
 # oh-my-zsh config
-source $ZSH_DIR/ohmyzsh
+source ~/.config/zsh/ohmyzsh
 
 # aliases
-source $ZSH_DIR/aliases
+source ~/.config/zsh/aliases
 
 # everything else
-source $ZSH_DIR/misc
+source ~/.config/zsh/misc
 
 # include local rc file
 if [[ -f ~/.zshrc.local ]]; then
