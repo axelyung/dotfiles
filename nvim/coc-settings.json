@@ -3,6 +3,8 @@
   "tsserver.ignoreLocalTsserver": true,
   "json.format.enable": true,
   "json.enable":true,
+  "yaml.enable":true,
+  "yaml.format.enable":true,
   "eslint.autoFixOnSave": true,
   "eslint.debug": true,
   "eslint.packageManager": "pnpm",

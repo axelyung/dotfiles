@@ -20,55 +20,42 @@
     ~/.config/dunst:
       if: which dunst
       path: dunst
-
     # git
     ~/.gitconfig:
       if: which git
       path: git/gitconfig
-
     ~/.gitignore_global:
       if: which git
       path: git/gitignore_global
-
-    # alacritty
-    ~/.alacritty.yml:
-      if: which alacritty
-      path: alacritty/alacritty.yml
-
     # regolith
     ~/.config/regolith2:
       path: regolith
-
     # tmux
     ~/.tmux.conf:
       path: tmux/tmux.conf
       force: true
     #~/.tmux/plugins:
       #path: tmux/plugins
-
-    # nvim
+    # neovim
     ~/.config/nvim:
       if: which nvim
       path: nvim
-
     # neofetch
     ~/.config/neofetch:
       if: which neofetch
       path: neofetch
-
     # zsh
     ~/.config/zsh:
       if: which zsh
       path: zsh
-
+    # starship
     ~/.config/starship.toml:
       if: which starship
       path: starship/starship.toml
-
+    # taskwarrior
     ~/.config/taskwarrior:
       if: which task
       path: taskwarrior
-
     # conky
     #~/.config/conky:
       #if: which conky

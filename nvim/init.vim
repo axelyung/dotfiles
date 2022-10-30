@@ -114,10 +114,6 @@ let g:vim_json_conceal=0
 let g:vim_json_syntax_conceal=0
 set conceallevel=0
 
-" python host setup
-let g:python2_host_prog = '/Users/axelyung/.pyenv/shims/python2'
-let g:python3_host_prog = '/Users/axelyung/.pyenv/shims/python3'
-
 " fold based on indent
 set foldmethod=indent
 " disable folding
