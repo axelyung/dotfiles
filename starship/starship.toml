@@ -13,9 +13,6 @@ symbol = " "
 [dart]
 symbol = " "
 
-[directory]
-read_only = " "
-
 [docker_context]
 symbol = " "
 
@@ -81,3 +78,12 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
+
+[character]
+success_symbol = "[➜](green) "
+error_symbol = "[✗](red) "
+
+[directory]
+read_only = " "
+truncate_to_repo = false
+truncation_symbol = "…/"
