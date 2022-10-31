@@ -10,52 +10,52 @@
 - clean:
     ~/:
       force: true
-    ~/.config:
-      recursive: true
+    #~/.config:
+      #recursive: true
 - create:
   - ~/Code
   - ~/Applications
 - link:
     # dunst
-    ~/.config/dunst:
+    ~/.config:
       if: which dunst
-      path: dunst
+      path: config
     # git
-    ~/.gitconfig:
-      if: which git
-      path: git/gitconfig
-    ~/.gitignore_global:
-      if: which git
-      path: git/gitignore_global
+    #~/.gitconfig:
+      #if: which git
+      #path: git/gitconfig
+    #~/.gitignore_global:
+      #if: which git
+      #path: git/gitignore_global
     # regolith
-    ~/.config/regolith2:
-      path: regolith
+    #~/.config/regolith2:
+      #path: regolith
     # tmux
-    ~/.tmux.conf:
-      path: tmux/tmux.conf
-      force: true
+    #~/.tmux.conf:
+      #path: tmux/tmux.conf
+      #force: true
     #~/.tmux/plugins:
       #path: tmux/plugins
     # neovim
-    ~/.config/nvim:
-      if: which nvim
-      path: nvim
+    #~/.config/nvim:
+      #if: which nvim
+      #path: nvim
     # neofetch
-    ~/.config/neofetch:
-      if: which neofetch
-      path: neofetch
+    #~/.config/neofetch:
+      #if: which neofetch
+      #path: neofetch
     # zsh
-    ~/.config/zsh:
-      if: which zsh
-      path: zsh
+    #~/.config/zsh:
+      #if: which zsh
+      #path: zsh
     # starship
-    ~/.config/starship.toml:
-      if: which starship
-      path: starship/starship.toml
+    #~/.config/starship.toml:
+      #if: which starship
+      #path: starship/starship.toml
     # taskwarrior
-    ~/.config/taskwarrior:
-      if: which task
-      path: taskwarrior
+    #~/.config/taskwarrior:
+      #if: which task
+      #path: taskwarrior
     # conky
     #~/.config/conky:
       #if: which conky
@@ -72,21 +72,21 @@
   #- tic -x terminfo/tmux.terminfo
   #- tic -x terminfo/xterm-256color-italic.terminfo
   -
-    if: which tmux
-    description: source tmux config file
-    command: tmux source-file ~/.tmux.conf
+    if: which tmux && tmux info &> /dev/null
+    description: Refresh tmux
+    command: tmux source-file ~/.config/tmux/tmux.conf
 
   #- ~/.tmux/plugins/tpm/scripts/install_plugins.sh
-  - 
+  -
     if: which nvim
     description: NeoVim installation
-    command: nvim +PlugUpgrade +PlugInstall +CocUpdate +qall
+    command: nvim +PlugUpgrade +PlugInstall +CocUpdate +CocInstall +qall
   - 
     if: which zsh
     description: Refresh zsh
     command: |
-      echo "source ~/.config/zsh/root" > ~/.zshrc
-      source ~/.zshrc
+      echo "export ZDOTDIR=$HOME/.config/zsh && . $ZDOTDIR/.zshenv" > ~/.zshenv
+      source ~/.zshenv
   -
     if: which dunstify
     description: Test notifications

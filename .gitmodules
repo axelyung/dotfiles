@@ -2,15 +2,22 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "zsh/oh-my-zsh"]
-	path = zsh/oh-my-zsh
+[submodule "oh-my-zsh"]
+	path = config/oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule "zsh/custom/plugins/zsh-syntax-highlighting"]
-	path = zsh/custom/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "zsh/custom/plugins/zsh-completions"]
-	path = zsh/custom/plugins/zsh-completions
-	url = https://github.com/zsh-users/zsh-completions.git
-[submodule "zsh/custom/plugins/zsh-autosuggestions"]
-	path = zsh/custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
+	ignore = dirty
+[submodule "zsh-syntax-highlighting"]
+	path = config/zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+	ignore = dirty
+[submodule "zsh-autosuggestions"]
+	path = config/zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+	ignore = dirty
+[submodule "zsh-completions"]
+	path = config/zsh/custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+	ignore = dirty
+[submodule "config/oh-my-zsh"]
+	path = config/oh-my-zsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git
