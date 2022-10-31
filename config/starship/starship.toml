@@ -1,3 +1,8 @@
+format="""
+$directory$git_branch$git_status$fill$all\
+$character\
+"""
+
 [aws]
 symbol = "  "
 
@@ -9,6 +14,11 @@ symbol = " "
 
 [conda]
 symbol = " "
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+style = "yellow"
 
 [dart]
 symbol = " "
@@ -24,6 +34,10 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+style = "purple"
+
+[git_status]
+style = "yellow"
 
 [golang]
 symbol = " "
@@ -80,10 +94,11 @@ symbol = " "
 symbol = "🅢 "
 
 [character]
-success_symbol = "[➜](green) "
-error_symbol = "[✗](red) "
+success_symbol = "[➜](green)"
+error_symbol = "[✗](red)"
 
 [directory]
 read_only = " "
 truncate_to_repo = false
 truncation_symbol = "…/"
+style = "cyan"
