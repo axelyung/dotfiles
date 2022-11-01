@@ -16,10 +16,10 @@
   - ~/Code
   - ~/Applications
 - link:
-    # dunst
     ~/.config:
-      if: which dunst
       path: config
+    ~/.themes:
+      path: themes
     # git
     #~/.gitconfig:
       #if: which git
@@ -94,3 +94,9 @@
       dunstify -t 3 -u low "low urgency notification"
       dunstify -t 3 -u normal "normal urgency notification"
       dunstify -t 3 -u critical "critical urgency notification"
+  #-
+    #if: which gsettings
+    #description: Refresh GTK theme
+    #command: |
+      #gsettings set org.gnome.desktop.interface gtk-theme "OneDark"
+      #gsettings set org.gnome.desktop.wm.preferences theme "OneDark"
