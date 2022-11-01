@@ -17,7 +17,7 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY             
 
 # Expire duplicate entries first when trimming history.
-estopt HIST_EXPIRE_DUPS_FIRST    
+setopt HIST_EXPIRE_DUPS_FIRST
 
 # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_DUPS          
