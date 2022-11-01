@@ -17,10 +17,12 @@ git
 i3xrocks-bluetooth
 i3xrocks-memory
 i3xrocks-temp
+libgtk-3-dev
 linux-modules-nvidia-515-generic
 neofetch
 neovim
 nvidia-driver-515
+okular
 ripgrep
 spotify-client
 taskwarrior
