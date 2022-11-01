@@ -1,3 +1,6 @@
+# history config
+source ~/.config/zsh/history
+
 # oh-my-zsh config
 source ~/.config/zsh/ohmyzsh
 
