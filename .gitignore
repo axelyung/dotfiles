@@ -7,6 +7,7 @@ config/*
 !config/alacritty
 !config/bat
 !config/dunst
+!config/flameshot
 !config/git
 !config/gtk-3.0
 !config/lazydocker
