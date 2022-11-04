@@ -7,11 +7,32 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'arcticicestudio/nord-vim'
 
+Plug 'ryanoasis/vim-devicons'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='base16_nord'
+let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusShowIgnored = 1
+let g:NERDTreeGitStatusConcealBrackets = 1
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+	\ 'Modified'  :'✹',
+	\ 'Staged'    :'+',
+	\ 'Untracked' :'✭',
+	\ 'Renamed'   :'➜',
+	\ 'Unmerged'  :'═',
+	\ 'Deleted'   :'✖',
+	\ 'Dirty'     :'✗',
+	\ 'Ignored'   :'!',
+	\ 'Clean'     :'✔︎',
+	\ 'Unknown'   :'?',
+	\ }
+Plug 'johnstef99/vim-nerdtree-syntax-highlight'
 
 Plug 'machakann/vim-highlightedyank'
 
@@ -84,7 +105,6 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-eslint',
   \ 'coc-pyright',
-  \ 'coc-explorer',
   \ 'coc-json',
   \ 'coc-yaml',
   \ 'coc-html',
