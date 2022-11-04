@@ -87,3 +87,7 @@
       dunstify -t 3 -u low "low urgency notification"
       dunstify -t 3 -u normal "normal urgency notification"
       dunstify -t 3 -u critical "critical urgency notification"
+  -
+    if: which zsh
+    description: Test colors
+    command: zsh $DOTFILES/scripts/color_test.sh
