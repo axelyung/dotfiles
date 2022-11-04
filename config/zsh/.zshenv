@@ -16,4 +16,6 @@ export STARSHIP_CONFIG="${XDG_CONFIG_DIR}/starship/starship.toml"
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
 
+export DOTFILES="${HOME}/Code/dotfiles"
+
 source "$HOME/.cargo/env"
