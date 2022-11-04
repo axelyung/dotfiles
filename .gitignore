@@ -20,6 +20,8 @@ config/*
 !config/starship
 !config/taskwarrior
 !config/tmux
+config/tmux/plugins
+!config/tmux/plugins/tpm
 !config/zsh
 config/zsh/.zcompdump*
 !config/okularpartrc
