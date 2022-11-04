@@ -5,12 +5,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 
-Plug 'joshdick/onedark.vim'
-let g:onedark_hide_endofbuffer=0
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='onedark'
+let g:airline_theme='base16_nord'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 

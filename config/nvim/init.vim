@@ -25,7 +25,7 @@ syntax enable
 " Set colorscheme
 set termguicolors
 
-colorscheme onedark
+colorscheme nord
 highlight Normal ctermbg=None
 highlight LineNr ctermfg=DarkGrey" Turn on line numbers
 
@@ -49,7 +49,7 @@ set showmatch
 set mat=2
 
 " use system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Set file encoding
 set encoding=utf8
@@ -145,3 +145,6 @@ if (empty($TMUX))
 endif
 
 :autocmd BufWritePost ~/.config/nvim/*.vim execute SourceConfig() %:p
+
+highlight Normal guibg=none
+highlight NonText guibg=none
