@@ -25,3 +25,6 @@ config/tmux/plugins
 !config/zsh
 config/zsh/.zcompdump*
 !config/okularpartrc
+
+src/.config/tmux/plugins
+src/.config/zsh/.zcompdump*

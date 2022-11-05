@@ -19,3 +19,4 @@ export FZF_DEFAULT_OPTS="--ansi"
 export DOTFILES="${HOME}/Code/dotfiles"
 
 source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
