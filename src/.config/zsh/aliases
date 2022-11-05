@@ -2,7 +2,7 @@
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias reload="source ~/.zshrc"
+alias reload="source $ZDOTDIR/.zshrc"
 
 # aliases
 alias mv="mv -i"
@@ -27,9 +27,6 @@ alias dsa="docker stop $(docker ps -aq)"
 alias daa="docker attach $(docker ps -aq)"
 alias dsra="docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
 alias lzd="lazydocker"
-
-alias bat="batcat"
-alias fd="fdfind"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'

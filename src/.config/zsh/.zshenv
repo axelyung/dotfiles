@@ -1,12 +1,9 @@
-export EDITOR=vi
+export EDITOR=nvim
 export VISUAL=nvim
 
-XDG_CONFIG_DIR="${HOME}/.config"
-XDG_DATA_DIR="${HOME}/.local/share"
-
+export XDG_CONFIG_DIR="${HOME}/.config"
 export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$XDG_CONFIG_DIR"
-
-export SSH_KEY_PATH="~/.ssh/id_ed25519"
+export XDG_DATA_DIR="${HOME}/.local/share"
 
 export TASKRC="${XDG_CONFIG_DIR}/taskwarrior/taskrc"
 export TASKDATA="${XDG_DATA_DIR}/taskwarrior"
@@ -18,5 +15,4 @@ export FZF_DEFAULT_OPTS="--ansi"
 
 export DOTFILES="${HOME}/Code/dotfiles"
 
-source "$HOME/.cargo/env"
 . "$HOME/.cargo/env"

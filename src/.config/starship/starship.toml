@@ -33,7 +33,7 @@ symbol = " "
 symbol = " "
 
 [git_branch]
-symbol = " "
+symbol = " "
 style = "purple"
 
 [git_status]
@@ -46,7 +46,7 @@ symbol = " "
 symbol = " "
 
 [hg_branch]
-symbol = " "
+symbol = " "
 
 [java]
 symbol = " "
