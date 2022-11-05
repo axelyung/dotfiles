@@ -14,10 +14,9 @@
   - ~/Code
   - ~/Applications
 - link:
-    ~/.config:
-      path: config
-    ~/.themes:
-      path: themes
+    ~/.config/:
+      glob: true
+      path: src/.config/*
     # git
     #~/.gitconfig:
       #if: which git
@@ -78,7 +77,7 @@
     if: which zsh
     description: Refresh zsh
     command: |
-      echo "export ZDOTDIR=$HOME/.config/zsh && . $ZDOTDIR/.zshenv" > ~/.zshenv
+      echo "export ZDOTDIR=$HOME/.config/zsh && . \$ZDOTDIR/.zshenv" > ~/.zshenv
       source ~/.zshenv
   -
     if: which dunstify
