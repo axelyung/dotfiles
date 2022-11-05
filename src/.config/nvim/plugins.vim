@@ -16,6 +16,7 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 Plug 'preservim/nerdtree'
+let g:NERDTreeShowHidden = 1
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusShowIgnored = 1
