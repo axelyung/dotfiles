@@ -73,12 +73,12 @@ Plug 'cespare/vim-toml'
 "Plug 'pangloss/vim-javascript'
 "Plug 'leafgarland/typescript-vim'
 "Plug 'peitalin/vim-jsx-typescript'
-
-"Plug 'chrisbra/Colorizer'
-"let g:colorizer_auto_filetype='*'
-"let g:colorizer_auto_color = 1
-"let g:colorizer_skip_comments = 1
-"let g:colorizer_disable_bufleave = 1
+"
+Plug 'chrisbra/Colorizer'
+let g:colorizer_auto_filetype='*'
+let g:colorizer_auto_color = 1
+let g:colorizer_skip_comments = 0
+let g:colorizer_disable_bufleave = 1
 
 "Plug 'fatih/vim-go'
 "let g:go_list_type = "quickfix"
