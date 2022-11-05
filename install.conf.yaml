@@ -58,10 +58,18 @@
       #if: which conky
       #path: conky
 - shell:
+  - 
+    if: which i3-msg
+    description: Refresh i3
+    command: |
+      i3-msg reload
+      i3-msg restart
   -
-    if: which dunst
-    description: Refresh dunst
-    command: killall dunst
+    if: which zsh
+    description: Refresh zsh
+    command: |
+      echo "export ZDOTDIR=$HOME/.config/zsh && . \$ZDOTDIR/.zshenv" > ~/.zshenv
+      source ~/.zshenv
   -
     if: which tmux && tmux info &> /dev/null
     description: Refresh tmux
@@ -74,11 +82,9 @@
     description: NeoVim installation
     command: nvim +PlugUpgrade +PlugInstall +CocUpdate +CocInstall +qall
   -
-    if: which zsh
-    description: Refresh zsh
-    command: |
-      echo "export ZDOTDIR=$HOME/.config/zsh && . \$ZDOTDIR/.zshenv" > ~/.zshenv
-      source ~/.zshenv
+    if: which dunst
+    description: Refresh dunst
+    command: killall dunst
   -
     if: which dunstify
     description: Test notifications
