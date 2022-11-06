@@ -318,17 +318,18 @@ set $nord15 #B48EAD
 #####################
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
+	font pango:FiraCode 10
 	i3bar_command i3bar
-	status_command i3blocks
+	status_command i3status
+	# status_command i3blocks
+	# status_command 2>/tmp/i3blocks.err i3blocks -vvv -c $XDG_CONFIG_HOME/i3blocks/config | tee /tmp/i3blocks.out
 	position bottom
-
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font pango:FiraCode 10
 	strip_workspace_numbers yes
 
     colors {
