@@ -17,6 +17,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 Plug 'preservim/nerdtree'
 let g:NERDTreeShowHidden = 1
+
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusShowIgnored = 1
@@ -35,6 +36,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 	\ }
 Plug 'johnstef99/vim-nerdtree-syntax-highlight'
 
+Plug 'kdheepak/lazygit.nvim'
+nnoremap <silent> <leader>lg :LazyGitCurrentFile<CR>
+
 Plug 'machakann/vim-highlightedyank'
 
 Plug 'junegunn/fzf'
@@ -47,16 +51,16 @@ Plug 'matze/vim-move'
 Plug 'svermeulen/vim-easyclip'
 let g:EasyClipUseSubstituteDefaults = 1
 
-Plug 'thaerkh/vim-workspace'
-let g:workspace_autosave_always = 1
-let g:workspace_session_directory = $HOME . '/.vim/sessions/'
+"Plug 'thaerkh/vim-workspace'
+"let g:workspace_autosave_always = 1
+"let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 
 Plug 'tpope/vim-fugitive'
 
 Plug 'airblade/vim-gitgutter'
 
 Plug 'zivyangll/git-blame.vim'
-nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
+nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
 
 "Plug 'jiangmiao/auto-pairs'
 "let g:AutoPairsMapCR = 0
