@@ -24,6 +24,3 @@
 [submodule "config/tmux/plugins/tpm"]
 	path = src/.config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
-[submodule "src/.config/i3blocks/blocklets/contrib"]
-	path = src/.config/i3blocks/blocklets/contrib
-	url = git@github.com:vivien/i3blocks-contrib.git
