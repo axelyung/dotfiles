@@ -1,9 +1,5 @@
-lazygit/state.yml
-taskwarrior/task
-Xresources
-.ignore
+*
 
-config/*
 !config/alacritty
 !config/bat
 !config/dunst
