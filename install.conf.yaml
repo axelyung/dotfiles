@@ -10,6 +10,8 @@
 - clean:
     ~/:
       force: true
+    ~/.config/:
+      force: true
 - create:
   - ~/Code
   - ~/Applications
@@ -83,12 +85,9 @@
     command: nvim +PlugUpgrade +PlugInstall +CocUpdate +CocInstall +qall
   -
     if: which dunst
-    description: Refresh dunst
-    command: killall dunst
-  -
-    if: which dunstify
-    description: Test notifications
+    description: Refresh dunst and test
     command: |
+      killall dunst
       dunstify -t 3 -u low "low urgency notification"
       dunstify -t 3 -u normal "normal urgency notification"
       dunstify -t 3 -u critical "critical urgency notification"
