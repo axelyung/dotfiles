@@ -15,18 +15,16 @@ default_floating_border pixel 1
 hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+#bindsym $mod+u border none
+#bindsym $mod+y border pixel 1
+#bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Open Sans 11
+font pango:FiraCode 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
-
-# start a terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -35,13 +33,12 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_recency
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+#bindsym $mod+z exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -58,15 +55,16 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec brave
 bindsym $mod+Ctrl+Return exec alacritty -e ranger
 bindsym $mod+Ctrl+b exec alacritty -e bmenu
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+#bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+#bindsym $mod+F5 exec terminal -e 'mocp'
 #bindsym $mod+t exec --no-startup-id pkill picom
 #bindsym $mod+Ctrl+t exec --no-startup-id picom -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+#bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+#
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-#bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
@@ -209,10 +207,7 @@ for_window [urgent=latest] focus
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r reload; restart
-
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+r reload
 
 # Set shut down, restart and locking features
 bindsym $mod+Escape mode "$mode_system"
@@ -250,27 +245,7 @@ mode "resize" {
 	bindsym Escape mode "default"
 }
 
-# Lock screen
-# bindsym $mod+Escape exec --no-startup-id blurlock
 
-# Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-#exec --no-startup-id manjaro-hello
-exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
-
-# Color palette used for the terminal ( ~/.Xresources file )
-#
 #################
 set $trans #FFFFFF00
 set $nord0 #2E3440
@@ -289,13 +264,33 @@ set $nord12 #D08770
 set $nord13 #EBCB8B
 set $nord14 #A3BE8C
 set $nord15 #B48EAD
-
 #####################
+
+# Autostart applications
+exec --no-startup-id alacritty
+exec --no-startup-id brave
+
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+#exec --no-startup-id pamac-tray
+# exec_always --no-startup-id sbxkb
+# exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_green
+
+exec_always --no-startup-id volumeicon
+exec_always --no-startup-id xfce4-power-manager
+exec_always --no-startup-id nm-applet
+exec_always --no-startup-id clipit
+exec_always --no-startup-id xautolock -time 10 -locker blurlock
+exec_always --no-startup-id blueman-applet
+exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id xsetroot -solid "#4C566A"
+
+# Color palette used for the terminal ( ~/.Xresources file )
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	position bottom
 	mode dock
-	font pango:FiraCode 10
 	separator_symbol "|"
 
 	i3bar_command i3bar --transparency
@@ -312,10 +307,10 @@ bar {
         statusline $nord4
         separator  $nord3
 
-#                          border  backgr. text
-        focused_workspace  $nord14 $nord14 $nord0
-        active_workspace   $nord14 $nord14 $nord0
-        inactive_workspace $nord1 $nord1 $nord6
+		#                  border backgr text
+        focused_workspace  $nord3 $nord3 $nord4
+        active_workspace   $nord3 $nord3 $nord4
+        inactive_workspace $nord1 $nord1 $nord4
         binding_mode       $nord9 $nord9 $nord0
         urgent_workspace   $nord11 $nord11 $nord0
     }
@@ -326,13 +321,13 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.   child_border
-client.focused          $nord14 $nord14 #80FFF9 #FDF6E3
-client.focused_inactive $nord2 $nord0 #1ABC9C #454948
-client.unfocused        $nord0 $nord0 #1ABC9C #454948
-client.urgent           $nord11 #FDF6E3 #1ABC9C #268BD2
+client.focused          $nord14 $nord14 $nord0 #FDF6E3
+client.focused_inactive $nord2	$nord0 #1ABC9C #454948
+client.unfocused        $nord0	$nord0 $nord6 #454948
+client.urgent           $nord11 $nord11 $nord0 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
-client.background       #2B2C2B
+client.background       $nord0
 
 #############################
 ### settings for i3-gaps: ###
@@ -340,53 +335,9 @@ client.background       #2B2C2B
 
 # Set inner/outer gaps
 gaps inner 5
-#gaps outer 1
-
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
+gaps outer 0
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-#set $mode_gaps Gaps: (o) outer, (i) inner
-#set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-#set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-#bindsym $mod+Shift+g mode "$mode_gaps"
-
-#mode "$mode_gaps" {
-        #bindsym o      mode "$mode_gaps_outer"
-        #bindsym i      mode "$mode_gaps_inner"
-        #bindsym Return mode "default"
-        #bindsym Escape mode "default"
-#}
-#mode "$mode_gaps_inner" {
-        #bindsym plus  gaps inner current plus 5
-        #bindsym minus gaps inner current minus 5
-        #bindsym 0     gaps inner current set 0
-
-        #bindsym Shift+plus  gaps inner all plus 5
-        #bindsym Shift+minus gaps inner all minus 5
-        #bindsym Shift+0     gaps inner all set 0
-
-        #bindsym Return mode "default"
-        #bindsym Escape mode "default"
-#}
-#mode "$mode_gaps_outer" {
-        #bindsym plus  gaps outer current plus 5
-        #bindsym minus gaps outer current minus 5
-        #bindsym 0     gaps outer current set 0
-
-        #bindsym Shift+plus  gaps outer all plus 5
-        #bindsym Shift+minus gaps outer all minus 5
-        #bindsym Shift+0     gaps outer all set 0
-
-        #bindsym Return mode "default"
-        #bindsym Escape mode "default"
-#}
