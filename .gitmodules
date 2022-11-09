@@ -2,15 +2,7 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "zsh-autosuggestions"]
-	path = src/config/zsh/custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-	ignore = dirty
-[submodule "zsh-completions"]
-	path = src/config/zsh/custom/plugins/zsh-completions
-	url = https://github.com/zsh-users/zsh-completions
-	ignore = dirty
-[submodule "oh-my-zsh"]
+[submodule "src/config/oh-my-zsh"]
 	path = src/config/oh-my-zsh
 	url = git@github.com:ohmyzsh/ohmyzsh.git
 [submodule "tpm"]
@@ -25,3 +17,6 @@
 [submodule "src/config/zsh/custom/plugins/zsh-completions"]
 	path = src/config/zsh/custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule "src/config/tmux/plugins/tpm"]
+	path = src/config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
