@@ -1,2 +1,3 @@
 src/config/tmux/plugins
+!src/config/tmux/plugins/tpm
 src/config/zsh/.zcompdump*
