@@ -1,0 +1,18 @@
+# follow sym links
+--follow
+
+# show hidden files
+--hidden
+
+# show line numbers
+--pretty
+
+# Don't let ripgrep vomit really long lines to my terminal, and show a preview.
+--max-columns=150
+--max-columns-preview
+
+# show gitignore files
+--no-ignore-vcs
+
+# Because who cares about case!?
+--smart-case

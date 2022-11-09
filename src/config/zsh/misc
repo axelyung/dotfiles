@@ -1,0 +1,16 @@
+# nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# gvm
+[[ -s "/home/axelyung/.gvm/scripts/gvm" ]] && source "/home/axelyung/.gvm/scripts/gvm"
+
+# tmux
+if [ ! "$TMUX" = ""  ]; then export TERM=tmux-256color; fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	# if not in tmux session already start new session
+	exec tmux new -As0
+else
+	# call quote on start
+	quote
+fi

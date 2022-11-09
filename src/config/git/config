@@ -1,0 +1,21 @@
+[user]
+name = Axel Yung
+email = axelyung@gmail.com
+
+[core]
+editor = nvim
+
+[filter "lfs"]
+required = true
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+
+[color]
+ui = true
+
+[url "git@github.com:"]
+insteadOf = https://github.com/
+
+[init]
+defaultBranch = main
