@@ -1,3 +1,10 @@
+tmp
+
+# ignore tmux plugins
 src/config/tmux/plugins/*
+
+# except for tpm as submodule
 !src/config/tmux/plugins/tpm
+
+# zsh completion files
 src/config/zsh/.zcompdump*

@@ -13,7 +13,7 @@ export STARSHIP_CONFIG="${XDG_CONFIG_DIR}/starship/starship.toml"
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always --no-ignore-vcs"
 export FZF_DEFAULT_OPTS="--ansi"
 
-export RIPGREP_CONFIG_PATH="${XDG_CONFIG_DIR}/ripgrep/config"
+export RIPGREP_CONFIG_PATH="${XDG_CONFIG_DIR}/ripgrep/ripgreprc"
 
 export DOTFILES="${HOME}/Code/dotfiles"
 
