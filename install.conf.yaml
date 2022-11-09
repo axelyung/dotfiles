@@ -18,7 +18,7 @@
 - link:
     ~/.config/:
       glob: true
-      path: src/.config/*
+      path: src/config/*
     # git
     #~/.gitconfig:
       #if: which git
