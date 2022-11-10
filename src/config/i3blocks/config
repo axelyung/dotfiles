@@ -1,0 +1,58 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME
+full_text="|"
+separator_block_width=15
+markup=none
+interval=10
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[wifi]
+label=wifi:
+INTERFACE=wlp9s0
+COLOR_GE80=#00FF00
+COLOR_GE60=#FFF600
+COLOR_GE40=#FFAE00
+COLOR_LOWR=#FF0000
+COLOR_DOWN=#FF0000
+
+[seperator]
+
+[battery]
+markup=pango
+interval=30
+
+[seperator]
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+
