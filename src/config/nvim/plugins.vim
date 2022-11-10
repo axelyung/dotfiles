@@ -30,6 +30,10 @@ Plug 'matze/vim-move'
 Plug 'svermeulen/vim-easyclip'
 let g:EasyClipUseSubstituteDefaults = 1
 
+Plug 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 "Plug 'thaerkh/vim-workspace'
 "let g:workspace_autosave_always = 1
 "let g:workspace_session_directory = $HOME . '/.vim/sessions/'

@@ -6,7 +6,6 @@
   "yaml.enable":true,
   "yaml.format.enable":true,
   "eslint.autoFixOnSave": true,
-  "eslint.debug": true,
   "eslint.packageManager": "pnpm",
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
