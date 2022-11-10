@@ -17,3 +17,4 @@ fi
 
 # starship
 eval "$(starship init zsh)"
+
