@@ -1,0 +1,81 @@
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+! nord colors
+#define color_nord_0  #2E3440
+#define color_nord_1  #3B4252
+#define color_nord_2  #434C5E
+#define color_nord_3  #4C566A
+#define color_nord_4  #D8DEE9
+#define color_nord_5  #E5E9F0
+#define color_nord_6  #ECEFF4
+#define color_nord_7  #8FBCBB
+#define color_nord_8  #88C0D0
+#define color_nord_9  #81A1C1
+#define color_nord_10 #5E81AC
+#define color_nord_11 #BF616A
+#define color_nord_12 #D08770
+#define color_nord_13 #EBCB8B
+#define color_nord_14 #A3BE8C
+#define color_nord_15 #B48EAD
+
+! gradient colors
+#define color_grad_0 color_nord_0
+#define color_grad_1 color_nord_1
+#define color_grad_2 color_nord_2
+#define color_grad_3 color_nord_3
+#define color_grad_4 color_nord_4
+#define color_grad_5 color_nord_5
+#define color_grad_6 color_nord_6
+
+! term colors
+#define color_black   color_nord_1
+#define color_red     color_nord_11
+#define color_green   color_nord_14
+#define color_yellow  color_nord_13
+#define color_blue    color_nord_9
+#define color_magenta color_nord_15
+#define color_cyan    color_nord_8
+#define color_white   color_nord_6
+
+! special colors
+#define color_bg      color_nord_0
+#define color_fg      color_nord_4
+#define color_cursor  color_nord_4
+
+! Xresources
+*.foreground:  color_fg
+*.background:  color_bg
+*.cursorColor: color_cursor
+*fading:       35
+*fadeColor:    nord3
+*.color0:      nord1
+*.color1:      nord11
+*.color2:      nord14
+*.color3:      nord13
+*.color4:      nord9
+*.color5:      nord15
+*.color6:      nord8
+*.color7:      nord5
+*.color8:      nord3
+*.color9:      nord11
+*.color10:     nord14
+*.color11:     nord13
+*.color12:     nord9
+*.color13:     nord15
+*.color14:     nord7
+*.color15:     nord6
+
+! xft settings
+Xft.dpi:       192
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
