@@ -16,6 +16,7 @@
 - create:
   - ~/Code
   - ~/Applications
+  - ~/Pictures/screenshots
 - link:
     ~/.dir_colors:
       path: src/dir_colors
@@ -30,7 +31,7 @@
     description: Refresh i3
     command: |
       i3-msg reload
-      i3-msg restart
+      #i3-msg restart
   -
     if: which zsh
     description: Refresh zsh
