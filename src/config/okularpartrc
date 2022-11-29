@@ -17,6 +17,7 @@ ShowLeftPanel=false
 
 [PageView]
 BackgroundColor=192,191,188
+MouseMode=TextSelect
 TrimMargins=true
 UseCustomBackgroundColor=true
 ViewColumns=2
