@@ -207,7 +207,7 @@ for_window [urgent=latest] focus
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r restart
 
 # Set shut down, restart and locking features
 bindsym $mod+Escape mode "$mode_system"
@@ -277,13 +277,12 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 
-exec_always --no-startup-id volumeicon
-exec_always --no-startup-id xfce4-power-manager
-exec_always --no-startup-id nm-applet
-exec_always --no-startup-id clipit
-exec_always --no-startup-id blueman-applet
-exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id xsetroot -solid "#4C566A"
+# script to start tray icons
+exec_always --no-startup-id "~/.config/i3/tray.sh"
+
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id fix_xcursor
+exec --no-startup-id xsetroot -solid "#4C566A"
 #exec_always --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 600 'blurlock' ''
 # Color palette used for the terminal ( ~/.Xresources file )
@@ -295,8 +294,6 @@ bar {
 
 	i3bar_command i3bar --transparency
 	status_command i3status
-	#status_command i3blocks
-	#status_command 2>/tmp/i3blocks.err SCRIPT_DIR=$XDG_CONFIG_HOME/i3blocks/scripts i3blocks -vvv -c $XDG_CONFIG_HOME/i3blocks/config | tee /tmp/i3blocks.out
 	tray_output primary
 	bindsym button4 nop
 	bindsym button5 nop
