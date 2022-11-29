@@ -90,7 +90,7 @@ let g:colorizer_disable_bufleave = 1
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
-  \ 'coc-conjure',
+  "\ 'coc-conjure',
   \ 'coc-css',
   \ 'coc-eslint',
   \ 'coc-explorer',
@@ -141,7 +141,7 @@ let g:coc_global_extensions = [
 
 Plug 'github/copilot.vim'
 
-Plug 'Olical/conjure'
+"Plug 'Olical/conjure'
 
 " Initialize plugin system
 call plug#end()
