@@ -10,6 +10,7 @@ source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/maps.vim
 source ~/.config/nvim/commands.vim
+source ~/.config/nvim/filetypes.vim
 
 set nocompatible
 set noshowmode
@@ -145,5 +146,3 @@ endif
 
 highlight Normal guibg=none
 highlight NonText guibg=none
-
-au BufNewFile,BufRead /*.rasi setf css
