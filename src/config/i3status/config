@@ -66,5 +66,5 @@ battery all {
 }
 
 time {
-	format = "%Y-%m-%d %H:%M:%S"
+	format = "%Y-%m-%d %H:%M:%S "
 }
