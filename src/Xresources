@@ -72,7 +72,7 @@ color_cursor:  color_nord_4
 *.color15:     color_nord_6
 
 ! xft settings
-Xft.dpi:       192
+Xft.dpi:       162
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb

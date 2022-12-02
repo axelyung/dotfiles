@@ -1,7 +1,8 @@
 export EDITOR=nvim
 export VISUAL=nvim
-export CODE="${HOME}/Code"
-export DOTFILES="${HOME}/Code/dotfiles"
+export SRCS="${HOME}/srcs"
+export CODE="${HOME}/code"
+export DOTFILES="${HOME}/code/dotfiles"
 
 export XDG_CONFIG_DIR="${HOME}/.config"
 export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$XDG_CONFIG_DIR"

@@ -21,16 +21,13 @@ hide_edge_borders none
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:FiraCode 10
+font pango:FiraCode Nerd Font 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
 
 # launch categorized menu
 #bindsym $mod+z exec --no-startup-id morc_menu
@@ -51,10 +48,17 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
+
+# rofi bindings
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+w exec rofi -show window
+bindsym $mod+s exec rofi -show keys
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec brave
 bindsym $mod+Ctrl+Return exec alacritty -e ranger
-bindsym $mod+Ctrl+b exec alacritty -e bmenu
+
 #bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 #bindsym $mod+F5 exec terminal -e 'mocp'
 #bindsym $mod+t exec --no-startup-id pkill picom
@@ -95,15 +99,15 @@ bindsym $mod+Shift+l move right
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
@@ -269,7 +273,6 @@ set $nord15 #B48EAD
 # Autostart applications
 exec --no-startup-id alacritty
 exec --no-startup-id brave
-
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id pamac-tray

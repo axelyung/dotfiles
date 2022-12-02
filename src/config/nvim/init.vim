@@ -145,3 +145,5 @@ endif
 
 highlight Normal guibg=none
 highlight NonText guibg=none
+
+au BufNewFile,BufRead /*.rasi setf css
