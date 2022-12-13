@@ -273,6 +273,8 @@ set $nord15 #B48EAD
 #####################
 
 # Autostart applications
+exec --no-startup-id picom -b
+
 exec --no-startup-id alacritty
 exec --no-startup-id brave
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
