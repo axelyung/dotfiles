@@ -70,17 +70,17 @@ plugins=(
 	command-not-found
 	copyfile
 	cp
-	history
-	tmux
-	zoxide
 	docker
 	git
+	history
+	kubectl
 	nvm
-	debian
 	rand-quote
 	taskwarrior
-	zsh-completions
+	tmux
+	zoxide
 	zsh-autosuggestions
+	zsh-completions
 	zsh-syntax-highlighting
 )
 
