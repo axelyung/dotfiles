@@ -28,6 +28,11 @@ alias daa="docker attach $(docker ps -aq)"
 alias dsra="docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
 alias lzd="lazydocker"
 
+# kubernetes
+alias kd="kubectl describe"
+alias ke="kubectl explain"
+alias kg="kubectl get"
+
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 

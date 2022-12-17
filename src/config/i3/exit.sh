@@ -4,9 +4,11 @@
 # with openrc use loginctl
 [ "$(cat /proc/1/comm)" = "systemd" ] && logind=systemctl || logind=loginctl
 
+lock=~/.config/i3/lock.sh
+
 case "$1" in
     lock)
-        i3lock
+        $lock
         ;;
     logout)
         i3-msg exit
@@ -15,10 +17,10 @@ case "$1" in
         dm-tool switch-to-greeter
         ;;
     suspend)
-        blurlock && $logind suspend
+        $lock && $logind suspend
         ;;
     hibernate)
-        blurlock && $logind hibernate
+        $lock && $logind hibernate
         ;;
     reboot)
         $logind reboot

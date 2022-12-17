@@ -56,4 +56,4 @@
   -
     if: which zsh
     description: Test colors
-    command: $DOTFILES/scripts/color_test.sh
+    command: $DOTFILES/scripts/test_colors.sh

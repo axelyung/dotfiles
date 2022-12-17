@@ -14,6 +14,7 @@ RenderMode=InvertLightness
 
 [Main View]
 ShowLeftPanel=false
+SplitterSizes=228,669
 
 [PageView]
 BackgroundColor=192,191,188
