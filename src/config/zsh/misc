@@ -12,6 +12,9 @@ if [ -f '/home/axelyung/.google-cloud-sdk/path.zsh.inc' ]; then . '/home/axelyun
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/axelyung/.google-cloud-sdk/completion.zsh.inc' ]; then . '/home/axelyung/.google-cloud-sdk/completion.zsh.inc'; fi
 
+# https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 # tmux
 if [ ! "$TMUX" = ""  ]; then export TERM=tmux-256color; fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
