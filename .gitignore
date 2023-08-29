@@ -8,3 +8,5 @@ src/config/tmux/plugins/*
 
 # zsh completion files
 src/config/zsh/.zcompdump*
+src/config/ranger/__pycache__
+src/config/ranger/plugins/__pycache__
