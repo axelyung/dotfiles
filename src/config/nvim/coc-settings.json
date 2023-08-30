@@ -1,6 +1,5 @@
 {
   "diagnostic.virtualText": true,
-  "tsserver.ignoreLocalTsserver": true,
   "json.format.enable": true,
   "json.enable":true,
   "yaml.enable":true,
@@ -27,5 +26,4 @@
     }
   },
   "suggest.maxCompleteItemCount": 20,
-  "tsserver.formatOnType": false
 }

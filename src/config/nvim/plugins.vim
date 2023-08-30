@@ -90,13 +90,19 @@ let g:colorizer_disable_bufleave = 1
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
-  "\ 'coc-conjure',
+  \ 'coc-conjure',
   \ 'coc-css',
   \ 'coc-eslint',
   \ 'coc-explorer',
+  \ 'coc-go',
   \ 'coc-html',
+  \ 'coc-helper',
+  \ 'coc-java',
+  \ 'coc-java-debug',
   \ 'coc-json',
   \ 'coc-pyright',
+  \ 'coc-python',
+  \ 'coc-sh',
   \ 'coc-tailwindcss',
   \ 'coc-tsserver',
   \ 'coc-yaml',
