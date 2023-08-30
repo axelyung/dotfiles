@@ -1,6 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/axelyung/code/dotfiles
+- /home/axelyung/repos/dotfiles
+- /home/axelyung/repos/nominal/galaxy
+- /home/axelyung/repos/nominal/scout
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false
+ignorewhitespaceindiffview: false
