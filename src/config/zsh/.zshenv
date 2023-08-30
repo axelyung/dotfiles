@@ -1,12 +1,14 @@
 export EDITOR=nvim
 export VISUAL=nvim
-export SRCS="${HOME}/srcs"
-export CODE="${HOME}/code"
-export DOTFILES="${HOME}/code/dotfiles"
+export TERMINAL=alacritty
 
-export XDG_CONFIG_DIR="${HOME}/.config"
+export DOTFILES="$HOME/repos/dotfiles"
+
+export XDG_CONFIG_DIR="$HOME/.config"
 export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$XDG_CONFIG_DIR"
-export XDG_DATA_DIR="${HOME}/.local/share"
+export XDG_DATA_DIR="$HOME/.local/share"
+export XDG_DOWNLOAD_DIR="$HOME/downloads"
+export XDG_PICTURES_DIR="$HOME/pictures"
 
 export BAT_THEME=Nord
 
@@ -24,3 +26,8 @@ export PNPM_HOME="/home/axelyung/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 . "$HOME/.cargo/env"
+
+# include local env file
+if [[ -f ~/.zshenv.local ]]; then
+	source ~/.zshenv.local
+fi

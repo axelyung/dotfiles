@@ -7,12 +7,12 @@ alias reload=". $ZDOTDIR/.zshrc"
 # aliases
 alias mv="mv -i"
 alias cp="cp -i"
+alias ls='exa -a'
+alias cat='bat'
 
-#ssh
+# ssh
 alias ssh='TERM=xterm-256color ssh'
 alias sshconfig="nvim ~/.ssh/config"
-
-alias ls='exa'
 
 # git
 alias gprune="git branch --merged | egrep -v '(^\*|master|develop|dev|stage|test)' | xargs git branch -d"
@@ -37,8 +37,10 @@ alias kg="kubectl get"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # dotfiles
-alias dfs="z dotfiles"
-alias dfsi="$(zoxide query dotfiles)/install"
+alias dfs="prev=$(pwd); z $DOTFILES; nvim .; $DOTFILES/install; z $prev"
+
+# taskwarrior
+alias tt="taskwarrior-tui"
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
