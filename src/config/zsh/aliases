@@ -23,9 +23,9 @@ alias gfr="git fetch -p && git rebase"
 alias lzg="lazygit"
 
 # docker
-alias dsa="docker stop $(docker ps -aq)"
-alias daa="docker attach $(docker ps -aq)"
-alias dsra="docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
+alias dsa='docker stop $(docker ps -aq)'
+alias daa='docker attach $(docker ps -aq)'
+alias dsra='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
 alias lzd="lazydocker"
 
 # kubernetes

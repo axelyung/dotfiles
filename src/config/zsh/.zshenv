@@ -2,13 +2,15 @@ export EDITOR=nvim
 export VISUAL=nvim
 export TERMINAL=alacritty
 
-export DOTFILES="$HOME/repos/dotfiles"
+export PATH="/usr/local/sbin:$PATH"
 
 export XDG_CONFIG_DIR="$HOME/.config"
 export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$XDG_CONFIG_DIR"
 export XDG_DATA_DIR="$HOME/.local/share"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export XDG_PICTURES_DIR="$HOME/pictures"
+
+export DOTFILES="$HOME/code/axelyung/dotfiles"
 
 export BAT_THEME=Nord
 
