@@ -1,0 +1,32 @@
+
+- shell:
+  - 
+    if: which i3-msg
+    description: Refresh i3
+    command: |
+      i3-msg reload
+  -
+    if: which zsh
+    description: Refresh zsh
+    command: |
+      echo "export ZDOTDIR=$HOME/.config/zsh && . \$ZDOTDIR/.zshenv" > ~/.zshenv
+      source ~/.zshenv
+  -
+    if: which tmux && tmux info &> /dev/null
+    description: Refresh tmux
+    command: |
+      tmux source-file ~/.config/tmux/tmux.conf
+      ~/.config/tmux/plugins/tpm/bin/install_plugins
+      ~/.config/tmux/plugins/tpm/bin/update_plugins all
+  -
+    if: which nvim
+    description: NeoVim installation
+    command: nvim +PlugUpgrade +PlugInstall +CocUpdate +CocInstall +qall
+  -
+    if: which dunst
+    description: Refresh dunst and test
+    command: $DOTFILES/scripts/test_dunst.sh
+  -
+    if: which zsh
+    description: Test colors
+    command: $DOTFILES/scripts/test_colors.sh
