@@ -28,7 +28,7 @@ alias daa='docker attach $(docker ps -aq)'
 alias dsra='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
 alias lzd="lazydocker"
 
-# kubernetes
+# kubectl
 alias kd="kubectl describe"
 alias ke="kubectl explain"
 alias kg="kubectl get"
@@ -36,8 +36,9 @@ alias kg="kubectl get"
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
-# dotfiles
-alias dfs="prev=$(pwd); z $DOTFILES; nvim .; $DOTFILES/install; z $prev"
+# chezmoi
+alias cm="chezmoi"
+alias cme="prev=$(pwd); z $(cm source-path); nvim .; cm apply; z $prev"
 
 # taskwarrior
 alias tt="taskwarrior-tui"
