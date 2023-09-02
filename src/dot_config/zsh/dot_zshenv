@@ -29,6 +29,8 @@ export PATH="$PNPM_HOME:$PATH"
 
 . "$HOME/.cargo/env"
 
+export PATH="$HOME/.bin:$PATH"
+
 # include local env file
 if [[ -f ~/.zshenv.local ]]; then
 	source ~/.zshenv.local
