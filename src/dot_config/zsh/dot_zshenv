@@ -24,9 +24,6 @@ export FZF_DEFAULT_OPTS="--ansi"
 
 export RIPGREP_CONFIG_PATH="${XDG_CONFIG_DIR}/ripgrep/ripgreprc"
 
-export PNPM_HOME="/home/axelyung/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.bin:$PATH"
