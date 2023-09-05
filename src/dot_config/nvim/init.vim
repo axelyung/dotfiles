@@ -12,6 +12,7 @@ source ~/.config/nvim/maps.vim
 source ~/.config/nvim/commands.vim
 source ~/.config/nvim/filetypes.vim
 
+set autowrite
 set nocompatible
 set noshowmode
 set formatoptions-=cro
