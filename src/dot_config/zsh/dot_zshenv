@@ -8,8 +8,8 @@ export PATH="$HOME/.bin:$PATH"
 export XDG_CONFIG_DIR="$HOME/.config"
 export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$XDG_CONFIG_DIR"
 export XDG_DATA_DIR="$HOME/.local/share"
-export XDG_DOWNLOAD_DIR="$HOME/downloads"
-export XDG_PICTURES_DIR="$HOME/pictures"
+export XDG_DOWNLOAD_DIR="$HOME/Downloads"
+export XDG_PICTURES_DIR="$HOME/Pictures"
 
 export BAT_THEME=Nord
 
