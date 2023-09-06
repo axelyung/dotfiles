@@ -11,6 +11,8 @@ Plug 'arcticicestudio/nord-vim'
 
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'tfnico/vim-gradle'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='base16'
