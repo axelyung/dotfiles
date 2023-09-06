@@ -72,11 +72,11 @@ plugins=(
 	command-not-found
 	copyfile
 	cp
+	direnv
 	docker
 	git
 	history
 	kubectl
-	nvm
 	rand-quote
 	taskwarrior
 	tmux

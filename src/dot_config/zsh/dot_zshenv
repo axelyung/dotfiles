@@ -3,14 +3,13 @@ export VISUAL=nvim
 export TERMINAL=alacritty
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 
 export XDG_CONFIG_DIR="$HOME/.config"
 export XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$XDG_CONFIG_DIR"
 export XDG_DATA_DIR="$HOME/.local/share"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export XDG_PICTURES_DIR="$HOME/pictures"
-
-export DOTFILES="$HOME/code/axelyung/dotfiles"
 
 export BAT_THEME=Nord
 
@@ -29,8 +28,6 @@ export RIPGREP_CONFIG_PATH="${XDG_CONFIG_DIR}/ripgrep/ripgreprc"
 # asdf
 # see https://asdf-vm.com/manage/configuration.html#environment-variables
 export ASDF_CONFIG_FILE="${XDG_CONFIG_DIR}/asdf/.asdfrc"
-
-export PATH="$HOME/.bin:$PATH"
 
 # include local env file
 if [[ -f ~/.zshenv.local ]]; then
