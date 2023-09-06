@@ -3,6 +3,8 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+Plug 'direnv/direnv'
+
 Plug 'sheerun/vim-polyglot'
 
 Plug 'arcticicestudio/nord-vim'
