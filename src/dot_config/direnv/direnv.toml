@@ -1,0 +1,9 @@
+[global]
+strict_env=true
+
+[whitelist]
+prefix=[
+	"~/Code/axelyung",
+	"~/Code/nominal",
+	"~/Code/sandbox"
+]
