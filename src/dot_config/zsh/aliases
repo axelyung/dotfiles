@@ -39,7 +39,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # chezmoi
 alias cm="chezmoi"
-alias cme="prev=$(pwd); z $(cm source-path); nvim .; cm apply; z $prev"
+alias cme="prev=$(pwd); z ~/.local/share/chezmoi; nvim .; cm apply; z $prev"
 
 # taskwarrior
 alias tt="taskwarrior-tui"
