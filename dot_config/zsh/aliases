@@ -11,6 +11,9 @@ alias ls='exa -a'
 alias cat='bat'
 alias df='duf'
 
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n" | sort'
+
 # ssh
 alias ssh='TERM=xterm-256color ssh'
 alias sshconfig="nvim ~/.ssh/config"
@@ -34,12 +37,11 @@ alias kd="kubectl describe"
 alias ke="kubectl explain"
 alias kg="kubectl get"
 
-# Pretty print the path
-alias path='echo $PATH | tr -s ":" "\n"'
-
 # chezmoi
 alias cm="chezmoi"
-alias cme="prev=$(pwd); z ~/.local/share/chezmoi; nvim .; cm apply; z $prev"
+alias cm="cm edit"
+alias cma="cm apply --refresh-externals"
+alias cmo='prev=$(pwd); z $(cm source-path); nvim .; cma; z $prev'
 
 # taskwarrior
 alias tt="taskwarrior-tui"
