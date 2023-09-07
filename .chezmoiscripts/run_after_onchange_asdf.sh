@@ -2,7 +2,5 @@
 
 echo "Running asdf setup..."
 
-set -eux
-
 # .tool-versions hash: {{ include ".tool-versions" | sha256sum }}
-asdf install
+[ -f ~/.tool-versions ] && asdf install
