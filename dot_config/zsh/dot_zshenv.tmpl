@@ -14,7 +14,11 @@ export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 
 # homebrew
-eval $(/opt/homebrew/bin/brew shellenv)
+{{ if eq .chezmoi.arch "arm64" }}
+eval "$(/opt/homebrew/bin/brew shellenv)"
+{{ else }}
+eval "$(/usr/local/bin/brew shellenv)"
+{{ end }}
 
 export BAT_THEME=Nord
 
