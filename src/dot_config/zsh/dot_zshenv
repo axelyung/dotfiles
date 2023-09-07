@@ -13,6 +13,9 @@ export XDG_DATA_DIR="$HOME/.local/share"
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 
+# homebrew
+eval $(/opt/homebrew/bin/brew shellenv)
+
 export BAT_THEME=Nord
 
 export TASKRC="${XDG_CONFIG_DIR}/taskwarrior/taskrc"
