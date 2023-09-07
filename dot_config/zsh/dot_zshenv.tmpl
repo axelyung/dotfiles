@@ -20,22 +20,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(/usr/local/bin/brew shellenv)"
 {{ end }}
 
-export BAT_THEME=Nord
-
-export TASKRC="${XDG_CONFIG_DIR}/taskwarrior/taskrc"
-export TASKDATA="${XDG_DATA_DIR}/taskwarrior"
-
-export STARSHIP_CONFIG="${XDG_CONFIG_DIR}/starship/starship.toml"
-
-export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always --no-ignore-vcs"
-export FZF_DEFAULT_OPTS="--ansi"
-
-export RIPGREP_CONFIG_PATH="${XDG_CONFIG_DIR}/ripgrep/ripgreprc"
-
-# asdf
-# see https://asdf-vm.com/manage/configuration.html#environment-variables
-export ASDF_CONFIG_FILE="${XDG_CONFIG_DIR}/asdf/.asdfrc"
-
 # include local env file
 if [[ -f ~/.zshenv.local ]]; then
 	source ~/.zshenv.local

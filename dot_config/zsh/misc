@@ -8,20 +8,23 @@ if [ -f '/home/axelyung/.google-cloud-sdk/completion.zsh.inc' ]; then . '/home/a
 # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-# https://github.com/halcyon/asdf-java#java_home
-. ~/.asdf/plugins/java/set-java-home.zsh
-
+# asdf
+export ASDF_CONFIG_FILE="${XDG_CONFIG_DIR}/asdf/.asdfrc"
 . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
+. ~/.asdf/plugins/java/set-java-home.zsh
+. ~/.asdf/plugins/golang/set-env.zsh
 
 # https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
 
-# tmux
-if [ ! "$TMUX" = ""  ]; then export TERM=tmux-256color; fi
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-	# if not in tmux session already start new session
-	exec tmux new -As0
-else
-	# call quote on start
-	quote
-fi
+export BAT_THEME=Nord
+
+export TASKRC="${XDG_CONFIG_DIR}/taskwarrior/taskrc"
+export TASKDATA="${XDG_DATA_DIR}/taskwarrior"
+
+export STARSHIP_CONFIG="${XDG_CONFIG_DIR}/starship/starship.toml"
+
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always --no-ignore-vcs"
+export FZF_DEFAULT_OPTS="--ansi"
+
+export RIPGREP_CONFIG_PATH="${XDG_CONFIG_DIR}/ripgrep/ripgreprc"

@@ -1,19 +1,19 @@
 # history config
-source ~/.config/zsh/history
+source $ZDOTDIR/history
 
 # oh-my-zsh config
-source ~/.config/zsh/ohmyzsh
+source $ZDOTDIR/ohmyzsh
 
 # aliases
-source ~/.config/zsh/aliases
+source $ZDOTDIR/aliases
 
 # everything else
-source ~/.config/zsh/misc
+source $ZDOTDIR/misc
 
 # include local rc file
 if [[ -f ~/.zshrc.local ]]; then
 	source ~/.zshrc.local
 fi
 
-# starship
-eval "$(starship init zsh)"
+# init
+source $ZDOTDIR/init
