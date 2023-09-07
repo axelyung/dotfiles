@@ -39,9 +39,9 @@ alias kg="kubectl get"
 
 # chezmoi
 alias cm="chezmoi"
-alias cm="cm edit"
-alias cma="cm apply --refresh-externals"
-alias cmo='prev=$(pwd); z $(cm source-path); nvim .; cma; z $prev'
+alias cme="chezmoi edit"
+alias cma="chezmoi apply"
+alias cmo='prev=$(pwd); z $(chezmoi source-path); nvim .; chezmoi apply; z $prev'
 
 # taskwarrior
 alias tt="taskwarrior-tui"

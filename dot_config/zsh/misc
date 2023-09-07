@@ -11,6 +11,8 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # https://github.com/halcyon/asdf-java#java_home
 . ~/.asdf/plugins/java/set-java-home.zsh
 
+. $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
+
 # https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
 
