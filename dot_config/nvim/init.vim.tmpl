@@ -6,6 +6,14 @@ set secure
 nnoremap <Space> <NOP>
 let mapleader = "\<Space>"
 
+{{ if lookPath "python" }}
+let g:python_host_prog = '{{ lookPath "python" }}'
+let g:python2_host_prog = '{{ lookPath "python" }}'
+{{- end }}
+{{- if lookPath "python3" }}
+let g:python3_host_prog = '{{ lookPath "python3" }}'
+{{- end }}
+
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/maps.vim
