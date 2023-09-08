@@ -8,12 +8,6 @@ if [ -f '/home/axelyung/.google-cloud-sdk/completion.zsh.inc' ]; then . '/home/a
 # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-# asdf
-export ASDF_CONFIG_FILE="${XDG_CONFIG_DIR}/asdf/.asdfrc"
-. $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
-. ~/.asdf/plugins/java/set-java-home.zsh
-. ~/.asdf/plugins/golang/set-env.zsh
-
 # https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
 
