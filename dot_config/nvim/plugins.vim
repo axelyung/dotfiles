@@ -152,6 +152,7 @@ let g:coc_global_extensions = [
 
 Plug 'github/copilot.vim'
 
+Plug 'DaniDiazTech/image.vim'
 "Plug 'Olical/conjure'
 
 " Initialize plugin system
