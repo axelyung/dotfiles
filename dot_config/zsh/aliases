@@ -10,6 +10,7 @@ alias cp="cp -i"
 alias ls='exa -a'
 alias cat='bat'
 alias df='duf'
+alias env='env | sort'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n" | sort'
