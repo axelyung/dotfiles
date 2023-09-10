@@ -1,3 +1,5 @@
 .config/github-copilot
 .zsh_history
 .DS_Store
+
+README.md
