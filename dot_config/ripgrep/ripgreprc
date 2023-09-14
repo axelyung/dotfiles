@@ -11,8 +11,5 @@
 --max-columns=150
 --max-columns-preview
 
-# show gitignore files
---no-ignore-vcs
-
 # Because who cares about case!?
 --smart-case
