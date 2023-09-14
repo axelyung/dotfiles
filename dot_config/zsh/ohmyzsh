@@ -68,12 +68,14 @@ ZSH_CUSTOM="${HOME}/.config/zsh/custom"
 plugins=(
 	aliases
 	asdf
+	aws
 	colored-man-pages
 	command-not-found
 	copyfile
 	cp
 	direnv
 	docker
+	fzf
 	git
 	history
 	kubectl
