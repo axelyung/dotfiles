@@ -5,6 +5,7 @@ $character\
 
 [aws]
 symbol = "  "
+format = 'on [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
 
 [buf]
 symbol = " "

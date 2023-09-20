@@ -4,6 +4,7 @@ email = axelyung@gmail.com
 
 [core]
 editor = nvim
+pager = delta
 
 [filter "lfs"]
 required = true
@@ -19,3 +20,16 @@ insteadOf = https://github.com/
 
 [init]
 defaultBranch = main
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+navigate = true
+light = false
+
+[merge]
+conflictstyle = diff3
+
+[diff]
+colorMoved = default
