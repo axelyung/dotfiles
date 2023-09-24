@@ -38,9 +38,9 @@ Plug 'junegunn/vim-easy-align'
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-"Plug 'thaerkh/vim-workspace'
-"let g:workspace_autosave_always = 1
-"let g:workspace_session_directory = $HOME . '/.vim/sessions/'
+Plug 'thaerkh/vim-workspace'
+let g:workspace_autosave_always = 1
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 
 Plug 'tpope/vim-fugitive'
 
@@ -157,6 +157,10 @@ let g:coc_global_extensions = [
 Plug 'github/copilot.vim'
 
 Plug 'DaniDiazTech/image.vim'
+
+Plug 'vim-syntastic/syntastic'
+
+Plug 'embear/vim-localvimrc'
 "Plug 'Olical/conjure'
 
 " Initialize plugin system

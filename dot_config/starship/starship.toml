@@ -4,7 +4,7 @@ $character\
 """
 
 [aws]
-symbol = "  "
+symbol = " "
 format = 'on [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
 
 [buf]
@@ -52,8 +52,14 @@ symbol = " "
 [java]
 symbol = " "
 
+[gradle]
+symbol = " "
+
 [julia]
 symbol = " "
+
+[kubernetes]
+disabled = false
 
 [lua]
 symbol = " "
@@ -99,7 +105,7 @@ success_symbol = "[➜](green)"
 error_symbol = "[✗](red)"
 
 [directory]
-read_only = " "
+read_only = " "
 truncate_to_repo = false
 truncation_symbol = "…/"
 style = "cyan"
