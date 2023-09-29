@@ -1,4 +1,6 @@
 .config/github-copilot
+.config/oh-my-zsh/cache
+.config/gh/private_*
 .zsh_history
 .DS_Store
 

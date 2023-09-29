@@ -7,7 +7,6 @@ alias reload=". $ZDOTDIR/.zshrc"
 # aliases
 alias mv="mv -i"
 alias cp="cp -i"
-alias ls='exa -a'
 alias cat='bat'
 alias df='duf'
 alias env='env | sort'
@@ -50,6 +49,11 @@ alias tt="taskwarrior-tui"
 # other
 alias dl="wget -P ~/Downloads" # download file
 alias clc="fc -ln -1 | pbcopy" # copy last command
+
+# music
+alias ss='demucs -j 8 --int24 -o ~/Downloads --filename "{track}_{stem}.{ext}"'
+alias sd='spotify_dl -o ~/Downloads -s y -l'
+alias bp="basic-pitch ~/Downloads"
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then

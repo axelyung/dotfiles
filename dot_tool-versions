@@ -1,6 +1,8 @@
-java graalvm-22.3.1+java17
-gradle 8.3
-nodejs 18.17.1
+golang 1.22.0
+gradle 8.5-rc-2
+java graalvm-community-21.0.2
+nodejs 20.14.0
 python 3.11.5
-golang 1.21.1
 rust 1.72.0
+terraform 1.5.7
+lua 5.4.7
