@@ -1,8 +1,7 @@
-.config/github-copilot
-.config/oh-my-zsh/cache
+.DS_Store
 .config/chezmoi
 .config/gh/private_*
+.config/github-copilot
+.config/oh-my-zsh/cache
 .zsh_history
-.DS_Store
-
 README.md
