@@ -1,4 +1,4 @@
-format="""
+format = """
 $directory$git_branch$git_status$fill$all\
 $character\
 """
@@ -101,7 +101,7 @@ symbol = " "
 symbol = "🅢 "
 
 [character]
-success_symbol = "[➜](green)"
+success_symbol = "[~](green)"
 error_symbol = "[✗](red)"
 
 [directory]
