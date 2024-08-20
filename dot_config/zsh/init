@@ -5,8 +5,10 @@ if [[ -o interactive ]] && [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
         # if not in tmux session already start new session
         exec tmux new -As0
     else
-        echo
-        quote
+        if [ -z "$NVIM" ]; then
+          echo
+          quote
+        fi
         eval "$(starship init zsh)"
     fi
 fi
