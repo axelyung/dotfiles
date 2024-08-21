@@ -67,7 +67,6 @@ ZSH_CUSTOM="${HOME}/.config/zsh/custom"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	aliases
-	asdf
 	aws
 	colored-man-pages
 	command-not-found
@@ -80,7 +79,6 @@ plugins=(
 	history
 	kubectl
 	rand-quote
-	taskwarrior
 	tmux
 	zoxide
 	zsh-autosuggestions
