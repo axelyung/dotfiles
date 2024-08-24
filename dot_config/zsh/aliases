@@ -48,6 +48,11 @@ alias cmo='prev=$(pwd); z $(chezmoi source-path); nvim .; chezmoi apply; z $prev
 # taskwarrior
 alias tt="taskwarrior-tui"
 
+# gh
+alias prc="gh pr create"
+alias prv="gh pr view --web"
+alias pry="gh pr view --json url | jq -r '.url' | pbcopy"
+
 # other
 alias dl="wget -P ~/Downloads" # download file
 alias clc="fc -ln -1 | pbcopy" # copy last command
