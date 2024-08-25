@@ -26,7 +26,7 @@ alias gac="gaa && gcmsg"
 alias gf="git fetch -p"
 alias gfr="git fetch -p && git rebase"
 alias lzg="lazygit"
-alias dff="diff2html -s line -f html -d word -i command -o preview -- -M main"
+alias dff="diff2html -s side -f html -d word -i command -o preview -- -M main"
 
 # docker
 alias dsa='docker stop $(docker ps -aq)'
