@@ -3,3 +3,6 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = false
+
+vim.opt.spell = true
+vim.opt.spellfile = "~/.config/nvim/spell/en.utf-8.add"
