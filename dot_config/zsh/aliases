@@ -60,7 +60,7 @@ alias clc="fc -ln -1 | pbcopy" # copy last command
 # music
 alias ss='demucs -j 8 --int24 -o ~/Downloads --filename "{track}_{stem}.{ext}"'
 alias sd='spotify_dl -o ~/Downloads -s y -l'
-alias bp="basic-pitch ~/Downloads"
+alias bp="basic-pitch ~/Music/Basic\ Pitch"
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
