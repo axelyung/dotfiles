@@ -22,6 +22,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(/usr/local/bin/brew shellenv)"
 {{- end }}
 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # asdf
 export ASDF_CONFIG_FILE="${XDG_CONFIG_DIR}/asdf/.asdfrc"
 . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
