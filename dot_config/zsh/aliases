@@ -20,6 +20,7 @@ alias ssh='TERM=xterm-256color ssh'
 alias sshconfig="nvim ~/.ssh/config"
 
 # git
+alias gmm="git fetch && git merge origin/main"
 alias gprune="git branch --merged | egrep -v '(^\*|master|develop|dev|stage|test)' | xargs git branch -d"
 alias gundo="git reset HEAD~1"
 alias gac="gaa && gcmsg"
