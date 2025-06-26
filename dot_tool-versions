@@ -1,8 +1,9 @@
 golang 1.22.0
 gradle 8.5-rc-2
 java graalvm-community-21.0.2
-nodejs 22.15.1
-python 3.11.5
-rust 1.72.0
-terraform 1.5.7
 lua 5.4.7
+nodejs 22.15.1
+python 3.12.9
+rust 1.84.0
+rust 1.87.0
+terraform 1.5.7
